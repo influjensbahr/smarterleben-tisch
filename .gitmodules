@@ -1,3 +1,6 @@
 [submodule "framework"]
 	path = Assets/_scripts/framework
 	url = https://git.beatentrack.games/OTBT/framework.git
+[submodule "Assets/_scripts/framework"]
+	path = Assets/_scripts/framework
+	url = https://git.beatentrack.games/OTBT/framework.git
