@@ -1,0 +1,17 @@
+[submodule "Assets/_scripts/framework"]
+	update = merge
+[submodule "verify"]
+	path = sparrow-verify
+	url = https://git.beatentrack.games/OTBT/framework-verify.git
+	branch = master
+[submodule "volumetric-lights"]
+	path = volumetric-lights
+	url = https://git.beatentrack.games/OTBT/framework-volumetric-lights.git
+[submodule "vol-lights"]
+	path = sparrow-lights
+	url = https://git.beatentrack.games/OTBT/framework-volumetric-lights.git
+	branch = master
+[submodule "sparrow-debug"]
+	path = sparrow-debug
+	url = https://git.beatentrack.games/OTBT/framework-debug.git
+	branch = master
