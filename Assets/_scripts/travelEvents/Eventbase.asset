@@ -17,10 +17,10 @@ MonoBehaviour:
     m_AnswerTextA:
       m_AnswerText: 
       m_EventType: 0
-      m_Weight: 0
+      m_Weight: 5
     m_AnswerTextB:
       m_AnswerText: 
-      m_EventType: 0
+      m_EventType: 9
       m_Weight: 0
   - m_DialogueText: 
     m_AnswerTextA:
