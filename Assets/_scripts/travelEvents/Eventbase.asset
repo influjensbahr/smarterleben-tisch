@@ -12,5 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a03248328da696a41bfbead04ba612f0, type: 3}
   m_Name: Eventbase
   m_EditorClassIdentifier: 
-  m_DialogueOptions: []
-  m_EventTreshold: []
+  m_DialogueOptions:
+  - m_DialogueText: 
+    m_AnswerTextA:
+      m_AnswerText: 
+      m_EventType: 0
+      m_Weight: 0
+    m_AnswerTextB:
+      m_AnswerText: 
+      m_EventType: 0
+      m_Weight: 0
+  - m_DialogueText: 
+    m_AnswerTextA:
+      m_AnswerText: 
+      m_EventType: 0
+      m_Weight: 0
+    m_AnswerTextB:
+      m_AnswerText: 
+      m_EventType: 0
+      m_Weight: 0
+  m_Events:
+  - m_EventType: 0
+    m_Value: 0
+    m_TriggerThreshold: 50

@@ -1,43 +1,38 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
-using System.Reflection;
-using Sparrow.Verification;
 using UnityEngine;
 
 public class Eventmanager : MonoBehaviour
 {
     [SerializeField] Eventbase m_Eventbase;
-    Dictionary<Eventbase.TravelEventType, int> m_EventValues = new Dictionary<Eventbase.TravelEventType, int>();
+    Dictionary<Eventbase.TravelEventType, int> m_EventValues = new ();
+    public event Action<Eventbase.TravelEventType> OnEventTriggered;
 
-    public void AddEvent(Eventbase.TravelEventType eventType, int value)
+    void AddEvent(Eventbase.TravelEventType eventType, int value)
     {
-        if (!m_EventValues.ContainsKey(eventType))
+        if (!m_EventValues.TryAdd(eventType, value))
         {
-            m_EventValues[eventType] = 0;
+            m_EventValues[eventType] += value;
         }
-
-        m_EventValues[eventType] += value;
-        Debug.Log($"Event {eventType} added with value {value}");
 
         CheckAndTriggerEvent(eventType);
     }
 
     private void CheckAndTriggerEvent(Eventbase.TravelEventType eventType)
     {
-            foreach (var eventItem in m_Eventbase.Events)
+        foreach (var eventItem in m_Eventbase.Events)
+        {
+            if (eventItem.EventType == eventType && m_EventValues[eventType] >= eventItem.TriggerTreshold)
             {
-                Debug.Log($"Checking event {eventItem.EventType}: {m_EventValues[eventType]} :: {eventItem.TriggerTreshold}");
-                if (eventItem.EventType == eventType && m_EventValues[eventType] >= eventItem.TriggerTreshold)
-                {
-                    TriggerEvent(eventType);
-                    return;
-                }
+                TriggerEvent(eventType);
             }
+        }
     }
 
-    public void TriggerEvent(Eventbase.TravelEventType eventType)
+    void TriggerEvent(Eventbase.TravelEventType eventType)
     {
-        Debug.Log($"Event {eventType} triggered");
+        Debug.Log($"ATTENTION: {eventType} Event triggered for next Phase.");
+        OnEventTriggered?.Invoke(eventType);
     }
 
     public void TestEventManager()
