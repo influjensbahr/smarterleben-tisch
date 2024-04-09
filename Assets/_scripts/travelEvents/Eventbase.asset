@@ -10,5 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a03248328da696a41bfbead04ba612f0, type: 3}
-  m_Name: EventHandler
+  m_Name: Eventbase
   m_EditorClassIdentifier: 
+  m_DialogueOptions: []
+  m_EventTreshold: []
