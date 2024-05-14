@@ -18,7 +18,7 @@ public class Eventmanager : MonoBehaviour
         CheckAndTriggerEvent(eventType);
     }
 
-    private void CheckAndTriggerEvent(Eventbase.TravelEventType eventType)
+    void CheckAndTriggerEvent(Eventbase.TravelEventType eventType)
     {
         foreach (var eventItem in m_Eventbase.Events)
         {

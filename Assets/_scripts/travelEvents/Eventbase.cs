@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,8 +20,8 @@ public class Eventbase : ScriptableObject
         None
     }
 
-    [SerializeField] List<DialogueOption> m_DialogueOptions = new ();
-    [SerializeField] List<Events> m_Events = new ();
+    [Tooltip("Enter a dialogue text and two answer text. Select also an EventType which you want to support. Once the trigger threshold is reached, the Event happens.")][SerializeField] List<DialogueOption> m_DialogueOptions = new ();
+    [Tooltip("Select a TravelEventType and set its properties to use it ingame")][SerializeField] List<Events> m_Events = new ();
     public List<Events> Events => m_Events;
     public List<DialogueOption> DialogueOptions => m_DialogueOptions;
 }
@@ -45,11 +44,11 @@ public class DialogueOption
 [Serializable]
 public class Events
 {
-    public Events(Eventbase.TravelEventType eventType, int value, int triggerTreshold)
+    public Events(Eventbase.TravelEventType eventType, int value, int triggerThreshold)
     {
         m_EventType = eventType;
         m_Value = value;
-        m_TriggerThreshold = triggerTreshold;
+        m_TriggerThreshold = triggerThreshold;
     }
     
     [SerializeField] Eventbase.TravelEventType m_EventType;
