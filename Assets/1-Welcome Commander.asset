@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88759d47774f16643a3facd888e2a320, type: 3}
+  m_Name: 1-Welcome Commander
+  m_EditorClassIdentifier: 
+  m_NextYes: {fileID: 11400000, guid: 2063b592ccb12c94b9457eab36194882, type: 2}
+  m_NextNo: {fileID: 11400000, guid: 62c3e7875b8105b48a9403ac792b1920, type: 2}
+  timesPlayed: 0
+  m_Title: Welcome Commander
+  m_Text: Welcome aboard the Kyushu, Commander. We just left earth and are on our
+    way to our new home. Would you like a cup of tea?
+  m_Generation: 0
+  m_NatureMin: 0
+  m_NatureMax: 10
+  m_TechnologyMin: 0
+  m_TechnologyMax: 10
+  m_PeopleMin: 0
+  m_PeopleMax: 10
+  m_OrderMin: 0
+  m_OrderMax: 10
+  m_NatureYes: 0
+  m_TechnologyYes: 0
+  m_PeopleYes: 0
+  m_OrderYes: 0
+  m_NatureNo: 0
+  m_TechnologyNo: 0
+  m_PeopleNo: 0
+  m_OrderNo: 0
