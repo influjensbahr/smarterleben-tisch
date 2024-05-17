@@ -120,23 +120,6 @@ public class GUIContoller : Singleton<GUIContoller>
         CheckAndAnimateCritical(m_ShipHealthBar, SpaceshipController.instance.technology == 0 ? 0 : SpaceshipController.instance.technology / 10f, SpaceshipController.instance.technologyCriticals, m_HealthCrushers, "technology");
         CheckAndAnimateCritical(m_CrewHealthBar, SpaceshipController.instance.people == 0 ? 0 : SpaceshipController.instance.people / 10f, SpaceshipController.instance.peopleCriticals, m_CrewCrushers, "people");
         CheckAndAnimateCritical(m_BiodomeIntegrityBar, SpaceshipController.instance.nature == 0 ? 0 : SpaceshipController.instance.nature / 10f, SpaceshipController.instance.natureCriticals, m_NatureCrushers, "nature");
-
-        UpdateCriticals(m_NatureCrushers, SpaceshipController.instance.natureCriticals);
-        UpdateCriticals(m_OrderCrushers, SpaceshipController.instance.orderCriticals);
-        UpdateCriticals(m_CrewCrushers, SpaceshipController.instance.peopleCriticals);
-        UpdateCriticals(m_HealthCrushers, SpaceshipController.instance.technologyCriticals);
-    }
-
-    private void UpdateCriticals(Transform parent, int targetCount)
-    {
-        while (parent.childCount < targetCount)
-        {
-            Instantiate(m_CrushPrefab, parent);
-        }
-        while (parent.childCount > targetCount)
-        {
-            Destroy(parent.GetChild(0).gameObject);
-        }
     }
 
     private void CheckAndAnimateCritical(Image bar, float targetAmount, int criticals, Transform crusherParent, string type)
@@ -173,6 +156,24 @@ public class GUIContoller : Singleton<GUIContoller>
         audioSource.PlayOneShot(criticalSound);
         SpaceshipController.instance.ActivateCriticals();
 
+        StartCoroutine(BlinkBar(bar));
     }
+    private IEnumerator BlinkBar(Image bar)
+    {
+        float blinkDuration = 3f; // Gesamtdauer des Blinkens
+        float blinkInterval = 0.4f; // Intervalle in denen Farbe wechselt
+        float elapsed = 0f;
 
+        Color originalColor = bar.color;
+        Color blurpColor = Color.Lerp(Color.black, bar.color, 0.5f);
+
+        while (elapsed < blinkDuration)
+        {
+            bar.color = bar.color == blurpColor ? originalColor : blurpColor;
+            elapsed += blinkInterval;
+            yield return new WaitForSeconds(blinkInterval);
+        }
+
+        bar.color = originalColor; // Nach dem Blinken dauerhaft rot
+    }
 }

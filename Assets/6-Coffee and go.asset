@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88759d47774f16643a3facd888e2a320, type: 3}
   m_Name: 6-Coffee and go
   m_EditorClassIdentifier: 
-  m_NextYes: {fileID: 11400000, guid: 28c19421ba412ed4a8c896afbffb1e46, type: 2}
-  m_NextNo: {fileID: 11400000, guid: 28c19421ba412ed4a8c896afbffb1e46, type: 2}
+  m_NextYes: {fileID: 0}
+  m_NextNo: {fileID: 0}
   timesPlayed: 0
   m_Title: Coffee and go
   m_Text: "Here is a cup of our delicious ship brew. Let\u2019s get to business,
@@ -35,3 +35,4 @@ MonoBehaviour:
   m_TechnologyNo: 0
   m_PeopleNo: 0
   m_OrderNo: 0
+  m_Person: {fileID: 0}

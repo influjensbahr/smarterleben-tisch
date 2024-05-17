@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88759d47774f16643a3facd888e2a320, type: 3}
-  m_Name: ZZZ
+  m_Name: 36-Accompany search troop
   m_EditorClassIdentifier: 
   m_NextYes: {fileID: 0}
   m_NextNo: {fileID: 0}
   timesPlayed: 0
-  m_Title: 
-  m_Text: 
+  m_Title: Accompany search troop
+  m_Text: Thank you, commander. May I accompany the search team to make sure the
+    person is found?
   m_Generation: 0
   m_NatureMin: 0
   m_NatureMax: 10
@@ -34,4 +35,4 @@ MonoBehaviour:
   m_TechnologyNo: 0
   m_PeopleNo: 0
   m_OrderNo: 0
-  m_Person: {fileID: 0}
+  m_Person: {fileID: 21300000, guid: 3f463d953979f054ebfc0104da423ac4, type: 3}

@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88759d47774f16643a3facd888e2a320, type: 3}
-  m_Name: ZZZ
+  m_Name: 35-Biodiversity panic
   m_EditorClassIdentifier: 
   m_NextYes: {fileID: 0}
   m_NextNo: {fileID: 0}
-  timesPlayed: 0
-  m_Title: 
-  m_Text: 
+  timesPlayed: 1
+  m_Title: Biodiversity panic
+  m_Text: The info about our failing biodiversity might cause panic aboard. Should
+    we have agents accompany the researcher to keep him silent?
   m_Generation: 0
   m_NatureMin: 0
   m_NatureMax: 10
@@ -28,10 +29,10 @@ MonoBehaviour:
   m_OrderMax: 10
   m_NatureYes: 0
   m_TechnologyYes: 0
-  m_PeopleYes: 0
-  m_OrderYes: 0
+  m_PeopleYes: -2
+  m_OrderYes: 2
   m_NatureNo: 0
   m_TechnologyNo: 0
-  m_PeopleNo: 0
-  m_OrderNo: 0
+  m_PeopleNo: 1
+  m_OrderNo: -3
   m_Person: {fileID: 0}

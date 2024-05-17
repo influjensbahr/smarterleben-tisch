@@ -35,6 +35,7 @@ public class SpaceshipEvent : ScriptableObject
     [SerializeField] public float m_PeopleNo = 0f;
     [SerializeField] public float m_OrderNo = 0f;
 
+    [SerializeField] public Sprite m_Person = null;
     public void Yes()
     {
         SpaceshipController.instance.ChangeValues((int) m_NatureYes, (int)m_TechnologyYes, (int)m_PeopleYes, (int)m_OrderYes);
