@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.interactive-scape.tuio_client": {
+      "version": "https://github.com/InteractiveScapeGmbH/TuioUnityClient.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.textmeshpro": "3.0.0"
+      },
+      "hash": "046406e9b00c0808a0d23a21fa25e05979134ef9"
+    },
     "com.unity.2d.animation": {
       "version": "9.0.4",
       "depth": 1,
