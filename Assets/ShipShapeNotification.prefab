@@ -32,7 +32,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8052931906626446658}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -69,7 +68,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: id 678
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 29bacefaf603deb43b2f16ff3ede2a9e, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: -4693097384214812716, guid: 29bacefaf603deb43b2f16ff3ede2a9e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -188,7 +187,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8052931906626446658}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -293,7 +291,6 @@ RectTransform:
   - {fileID: 35464769895893916}
   - {fileID: 1230389575823089994}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -331,6 +328,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CanvasGroup: {fileID: -2737855939314410237}
   m_DisableInteractionWhenInvisible: 1
+  m_Invert: 0
+  m_TimeScale: 1
 --- !u!222 &537045693671570511
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -429,7 +428,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8052931906626446658}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -466,7 +464,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Dies ist eine Notification '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 29bacefaf603deb43b2f16ff3ede2a9e, type: 2}
+  m_fontAsset: {fileID: 0}
   m_sharedMaterial: {fileID: -4693097384214812716, guid: 29bacefaf603deb43b2f16ff3ede2a9e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -549,6 +547,10 @@ MonoBehaviour:
   m_AutoUpdateOnLanguageChange: 1
   m_LocalizedTextObject: {fileID: 0}
   m_SetAtRuntime: 1
+  m_ForceOneTimeStartUpdate: 0
+  onTextChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4814366614987347696
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +583,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8052931906626446658}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -679,7 +680,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8052931906626446658}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
