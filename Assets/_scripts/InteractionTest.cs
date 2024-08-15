@@ -1,4 +1,5 @@
 using DG.Tweening;
+using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,11 +22,13 @@ public class InteractionTest : MonoBehaviour
     {
         Debug.Log("InteractionTest: Object added");
         _imageInfoPanel.gameObject.SetActive(true);
+        _imageInfoPanel.DOFade(1, 0.5f);
     }
     
     private void HideInfos()
     {
         Debug.Log("InteractionTest: Object removed");
+        _imageInfoPanel.DOFade(0, 0.5f);
         _imageInfoPanel.gameObject.SetActive(false);
     }
 }
