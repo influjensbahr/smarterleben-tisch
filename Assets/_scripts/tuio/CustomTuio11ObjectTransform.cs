@@ -10,6 +10,7 @@ namespace TuioUnity.Tuio11
         public override void Initialize(Tuio11Container container)
         {
             _tuioObject = (Tuio11Object)container;
+            Debug.Log("TuioObject initialized");
             base.Initialize(container);
         }
 

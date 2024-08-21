@@ -10,6 +10,7 @@ using UnityEngine;
         {
             _blob = (Tuio11Blob)container;
             base.Initialize(container);
+            Debug.Log("TuioBlob initialized");
         }
         
         protected override void UpdateContainer()
