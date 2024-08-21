@@ -1,5 +1,5 @@
+using System;
 using DG.Tweening;
-using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,7 +17,7 @@ public class InteractionTest : MonoBehaviour
         CustomTuio11Visualizer.onObjectAdd -= ShowInfos;
         CustomTuio11Visualizer.onObjectRemove -= HideInfos;
     }
-    
+
     private void ShowInfos()
     {
         Debug.Log("InteractionTest: Object added");

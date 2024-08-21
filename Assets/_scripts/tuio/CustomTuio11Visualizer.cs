@@ -4,16 +4,15 @@ using TuioNet.Tuio11;
 using TuioUnity.Common;
 using TuioUnity.Tuio11;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class CustomTuio11Visualizer : MonoBehaviour
 {
     [SerializeField] private TuioSessionBehaviour _tuioSessionBehaviour;
-    [SerializeField] private Tuio11CursorTransform _cursorPrefab;
-    [SerializeField] private Tuio11ObjectTransform _objectPrefab;
-    [SerializeField] private Tuio11BlobTransform _blobPrefab;
+    [SerializeField] private CustomTuio11CursorTransform _cursorPrefab;
+    [SerializeField] private CustomTuio11ObjectTransform _objectPrefab;
+    [SerializeField] private CustomTuio11BlobTransform _blobPrefab;
 
-    private readonly Dictionary<uint, Tuio11Behaviour> _tuioBehaviours = new();
+    private readonly Dictionary<uint, CustomTuio11Behaviour> _customTuioBehaviours = new();
 
     private Tuio11Dispatcher _dispatcher;
     private Tuio11Dispatcher Dispatcher => (Tuio11Dispatcher)_tuioSessionBehaviour.TuioDispatcher;
@@ -61,17 +60,22 @@ public class CustomTuio11Visualizer : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        
+    }
+
     private void AddTuioCursor(object sender, Tuio11Cursor tuioCursor)
     {
         var tuio11CursorBehaviour = Instantiate(_cursorPrefab, transform);
         tuio11CursorBehaviour.Initialize(tuioCursor);
-        _tuioBehaviours.Add(tuioCursor.SessionId, tuio11CursorBehaviour);
+        _customTuioBehaviours.Add(tuioCursor.SessionId, tuio11CursorBehaviour);
         onCursorAdd.Invoke();
     }
 
     private void RemoveTuioCursor(object sender, Tuio11Cursor tuioCursor)
     {
-        if (_tuioBehaviours.Remove(tuioCursor.SessionId, out var cursorBehaviour))
+        if (_customTuioBehaviours.Remove(tuioCursor.SessionId, out var cursorBehaviour))
         {
             cursorBehaviour.Destroy();
             onCursorRemove.Invoke();
@@ -82,13 +86,13 @@ public class CustomTuio11Visualizer : MonoBehaviour
     {
         var objectBehaviour = Instantiate(_objectPrefab, transform);
         objectBehaviour.Initialize(tuioObject);
-        _tuioBehaviours.Add(tuioObject.SessionId, objectBehaviour);
+        _customTuioBehaviours.Add(tuioObject.SessionId, objectBehaviour);
         onObjectAdd.Invoke();
     }
 
     private void RemoveTuioObject(object sender, Tuio11Object tuioObject)
     {
-        if (_tuioBehaviours.Remove(tuioObject.SessionId, out var objectBehaviour))
+        if (_customTuioBehaviours.Remove(tuioObject.SessionId, out var objectBehaviour))
         {
             onObjectRemove.Invoke();
             objectBehaviour.Destroy();
@@ -99,12 +103,12 @@ public class CustomTuio11Visualizer : MonoBehaviour
     {
         var blobBehaviour = Instantiate(_blobPrefab, transform);
         blobBehaviour.Initialize(tuioBlob);
-        _tuioBehaviours.Add(tuioBlob.SessionId, blobBehaviour);
+        _customTuioBehaviours.Add(tuioBlob.SessionId, blobBehaviour);
     }
 
     private void RemoveTuioBlob(object sender, Tuio11Blob tuioBlob)
     {
-        if (_tuioBehaviours.Remove(tuioBlob.SessionId, out var blobBehaviour))
+        if (_customTuioBehaviours.Remove(tuioBlob.SessionId, out var blobBehaviour))
         {
             blobBehaviour.Destroy();
         }
