@@ -15,13 +15,9 @@ MonoBehaviour:
   id: 1
   title: Smart Parken
   projectImage: {fileID: 21300000, guid: 5d812d41b123dbe449f1b34f244b65a7, type: 3}
-  shortDescription: "Im Rahmen der Sofortma\xDFnahme \u201ESmart Parken\u201C wurde
-    auf der Parkfl\xE4che des Kieler Innovations- und Technologiezentrum GmbH (nachfolgend
-    KITZ) eine zus\xE4tzliche Nutzungsm\xF6glichkeit f\xFCr Anwohner*innnen geschaffen.
-    Hierbei wurde in Zusammenarbeit mit den Unternehmen ADDIX und EDAG die bestehende
-    Schrankenanlage mit einer Kennzeichenerkennung sowie einer Buchungsm\xF6glichkeit
-    per App erg\xE4nzt. Ebenso wurde Sensorik verbaut, um die Belegung von Parkpl\xE4tzen
-    erfassen zu k\xF6nnen. Die Ergebnisse der Testphase wurden analysiert und in
-    einer Handlungsempfehlung zusammengefasst."
+  projectParentCategory: 0
+  shortDescription: "In der Sofortma\xDFnahme Smart Parken wurde ein Pilotprojekt
+    zur Mehrfachnutzung von Unternehmens-Parkfl\xE4chen, die Anwohnerinnen au\xDFerhalb
+    der Gesch\xE4ftszeiten zur Verf\xFCgung gestellt werden, umgesetzt.\r"
   additionalInfo: 
   projectLocation: {x: 0, y: 0}

@@ -15,14 +15,12 @@ MonoBehaviour:
   id: 3
   title: Mobility Info Stele am Bahnhof Rendsburg
   projectImage: {fileID: 21300000, guid: 5d812d41b123dbe449f1b34f244b65a7, type: 3}
+  projectParentCategory: 0
   shortDescription: "Die Digitale Stele bietet den Nutzer*innen auf einer interaktiven
     Touch-Bedienoberfl\xE4che die M\xF6glichkeit, sich mit Echtzeit-Daten zu den
-    Mobilit\xE4tsangeboten im Umkreis von 300m zu informieren. Am Rendsburger Bahnhof
-    werden so die Abfahrtszeiten von Bus und Bahn inkl. der etwaigen Verz\xF6gerungen
-    angezeigt sowie die Verf\xFCgbarkeit des Bikesharing-System SprottenFlotte und
-    von Flow-Carsharing. Auf einer Karte k\xF6nnen sich die Nutzer*innen nicht nur
-    r\xE4umlich orientieren und die Standorte und Haltestellen der Verkehrsmittel
-    erkennen, sondern werden auch \xFCber die Angebote der Taxi-Unternehmen, von
-    ReMo oder des Schienenersatzverkehrs informiert."
+    Mobilit\xE4tsangeboten im Umkreis von 300m zu informieren. Auf einer Karte k\xF6nnen
+    sich die Nutzer*innen nicht nur r\xE4umlich orientieren und die Standorte und
+    Haltestellen der Verkehrsmittel erkennen, sondern werden auch \xFCber die Angebote
+    der Taxi-Unternehmen, von ReMo oder des Schienenersatzverkehrs informiert."
   additionalInfo: 
   projectLocation: {x: 0, y: 0}

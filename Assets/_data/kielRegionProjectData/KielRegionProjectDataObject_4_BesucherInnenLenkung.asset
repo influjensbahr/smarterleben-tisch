@@ -15,16 +15,10 @@ MonoBehaviour:
   id: 4
   title: Besucher*innen-Lenkung an der Kiellinie
   projectImage: {fileID: 21300000, guid: 5d812d41b123dbe449f1b34f244b65a7, type: 3}
-  shortDescription: "Die Kiellinie wird von Fu\xDFg\xE4nger*innen und Radfahrenden
-    genutzt. Bei sch\xF6nem Wetter wird die Promenade stark frequentiert, sodass
-    es teilweise zu ungewollten Interaktionen zwischen Fu\xDFg\xE4nger*innen und
-    Radfahrer*innen kommt. Die bisherige L\xF6sung sind statische Schilder, die die
-    Radfahrenden dazu anhalten, dauerhaft Schritttempo zu fahren. Ziel der Ma\xDFnahme
-    \u201EBesucher*innenz\xE4hlung und -lenkung\u201C ist eine digitale und dynamische
-    Handlungsempfehlung f\xFCr Fahrradfahrende zu schaffen: Bei geringem Besucher*innenaufkommen
-    auf der Kiellinie haben Fahrradfahrende freie Fahrt. Sollte sich der Bereich
-    mit Fu\xDFg\xE4nger*innen f\xFCllen, wird Radfahrenden \xFCber eine digitale
-    Infotafel die Veloroute als Ausweichstrecke empfohlen. Das vermeidet ungewollte
-    Zusammentreffen und entlastet die begrenzte Fl\xE4che auf der Promenade."
+  projectParentCategory: 0
+  shortDescription: "Fahrradfahrenden k\xF6nnen durch den Einsatz von Sensorentechnik
+    auf der teilweise hoch frequentierten Kiellinie auf digitalen Hinweisschildern
+    alternative und ggf. schnellere Routen vorgeschlagen werden um die Auslastung
+    im Promenadenbereich zu verringern.\r"
   additionalInfo: 
   projectLocation: {x: 0, y: 0}

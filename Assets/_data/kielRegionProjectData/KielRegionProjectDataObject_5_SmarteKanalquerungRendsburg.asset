@@ -15,16 +15,10 @@ MonoBehaviour:
   id: 5
   title: Smarte Kanalquerung Rendsburg
   projectImage: {fileID: 21300000, guid: 5d812d41b123dbe449f1b34f244b65a7, type: 3}
-  shortDescription: "Bei den verschiedenen Querungspunkten des Nord-Ostsee-Kanals
-    um Rendsburg gibt es zahlreiche Engstellen, die bei hohem Verkehrsaufkommen aus
-    unterschiedlichen Gr\xFCnden zu Stau f\xFChren. Um die Verkehrssituation zu erleichtern,
-    ist geplant die Verkehrsteilnehmer*innen in Echtzeit \xFCber die Verkehrsauslastung
-    auf der F\xE4hre, im Tunnel und der Rader Hochbr\xFCcke zu informieren. So k\xF6nnen
-    Tourist*innen und Pendler*innen bequem den f\xFCr sie schnellsten Querungspunkt
-    w\xE4hlen oder direkt entsprechend umgeleitet werden. Zentral f\xFCr die Umsetzung
-    ist die Integration bereits bestehender Daten auf die Regionale Datenplattform
-    der KielRegion, sowie die Erhebung von fehlenden Daten mittels Sensorik. Die
-    intelligente Verkn\xFCpfung dieser Daten durch Analysen und Visualisierung sind
-    weitere Schritte."
+  projectParentCategory: 0
+  shortDescription: "Durch den Einsatz von Sensorentechnik wird die aktuelle Auslastung
+    aller m\xF6glichen Kanalquerungen in Rendsburg erfasst, um basierend darauf fr\xFChzeitig
+    \xFCber Verkehrseinschr\xE4nkungen zu informieren und so eine gleichm\xE4\xDFige
+    Auslastung und weniger Stau zu erm\xF6glichen.\r"
   additionalInfo: 
   projectLocation: {x: 0, y: 0}
