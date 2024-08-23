@@ -7,8 +7,9 @@ public class KielRegionProjectDataObject : ScriptableObject
     public uint id;
     public string title;
     public Sprite projectImage;
+    public ProjectCategory projectParentCategory;
     [TextArea(3, 10)] public string shortDescription;
-    [TextArea(3, 10)]public string additionalInfo;
+    [TextArea(3, 10)] public string additionalInfo;
     public Vector2 projectLocation;
     
     public void SetProjectLocation(Vector3 position)

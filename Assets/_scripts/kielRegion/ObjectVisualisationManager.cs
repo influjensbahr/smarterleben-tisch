@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class ObjectVisualisationManager : MonoBehaviour
 {
-    [SerializeField] private KielRegionProjectDataObject[] m_ProjectDataObjects;
     [SerializeField] private GameObject m_ProjectInfos;
     [SerializeField] private TextMeshProUGUI m_Title;
     [SerializeField] private Image m_ProjectImage;
@@ -33,16 +32,16 @@ public class ObjectVisualisationManager : MonoBehaviour
             return;
         }
 
-        foreach (var projectDataObject in m_ProjectDataObjects)
-        {
-            if (projectDataObject.id == tuioObject.SymbolId)
-            {
-                currentTuioObject = tuioObject;
-                m_ProjectInfos.SetActive(true);
-                SetData(projectDataObject);
-                break;
-            }
-        }
+        // foreach (var projectDataObject in m_ProjectDataObjects)
+        // {
+        //     if (projectDataObject.id == tuioObject.SymbolId)
+        //     {
+        //         currentTuioObject = tuioObject;
+        //         m_ProjectInfos.SetActive(true);
+        //         SetData(projectDataObject);
+        //         break;
+        //     }
+        // }
     }
 
     private void HideInfos(Tuio11Object tuioObject)
