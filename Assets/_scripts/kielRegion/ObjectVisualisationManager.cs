@@ -19,6 +19,7 @@ public class ObjectVisualisationManager : MonoBehaviour
     [SerializeField] private ProjectDataContainer m_ProjectDataContainer;
     [SerializeField] private ObjectMapping[] m_ProjectObjectMappings;
     [SerializeField] private float m_Radius = 100f;
+    [SerializeField] private float m_animDelay = 0.2f;
     
     private Tuio11Object currentTuioObject = null;
 
@@ -55,7 +56,7 @@ public class ObjectVisualisationManager : MonoBehaviour
             for (int i = 0; i < projects.Count; i++)
             {
                 var project = projects[i];
-                var angle = i * angleStep;
+                var angle = -i * angleStep;
                 var x = Mathf.Cos(angle * Mathf.Deg2Rad) * radius;
                 var y = Mathf.Sin(angle * Mathf.Deg2Rad) * radius;
                 
@@ -65,9 +66,9 @@ public class ObjectVisualisationManager : MonoBehaviour
 
                 Sequence sequence = DOTween.Sequence();
                 sequence.Append(projectObject.transform.DOScale(Vector3.zero, 0f));
-                sequence.Join(projectObject.transform.DOScale(Vector3.one, 0.5f));
+                sequence.AppendInterval(i * m_animDelay);
+                sequence.Append(projectObject.transform.DOScale(Vector3.one, 0.5f));
                 sequence.Play();
-
             }
         }
         

@@ -23,7 +23,6 @@ public class ButtonToggle : MonoBehaviour
 
     void Toggle(Tuio11Cursor tuioCursor)
     {
-        Debug.Log("Toggle");
         Vector2 touchPosition = new Vector2(tuioCursor.Position.X * Screen.width, Screen.height - tuioCursor.Position.Y * Screen.height);
         
         if (m_targetObject.activeSelf)
