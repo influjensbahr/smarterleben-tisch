@@ -423,7 +423,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -386, y: 212}
+  m_AnchoredPosition: {x: -419, y: 254}
   m_SizeDelta: {x: 401.86328, y: 221.14258}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &640414533
@@ -614,7 +614,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18cb98ca5e3c5d840a36f76123b32ae4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_projectDataObjects: []
+  m_projectDataObjects:
+  - {fileID: 11400000, guid: 1dc3719e0e2d22f4398a28c7ff52e9bf, type: 2}
+  - {fileID: 11400000, guid: b74a38fe14c2b0640b004e0c25dce611, type: 2}
+  - {fileID: 11400000, guid: 71b0ccbb44912ad43ab9207c47afcd66, type: 2}
+  - {fileID: 11400000, guid: 00a24fa049909bb4da2ae2fa31cb6992, type: 2}
+  - {fileID: 11400000, guid: 4bb86283a76de5340a58bb3592a3aa01, type: 2}
 --- !u!4 &1489479984
 Transform:
   m_ObjectHideFlags: 0
@@ -671,7 +676,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0

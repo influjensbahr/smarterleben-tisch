@@ -18,8 +18,8 @@ public class CustomTuio11Visualizer : MonoBehaviour
     private Tuio11Dispatcher _dispatcher;
     private Tuio11Dispatcher Dispatcher => (Tuio11Dispatcher)_tuioSessionBehaviour.TuioDispatcher;
     
-    public static event Action onCursorAdd = delegate { };
-    public static event Action onCursorRemove = delegate { };
+    public static event Action<Tuio11Cursor> onCursorAdd = delegate { };
+    public static event Action<Tuio11Cursor> onCursorRemove = delegate { };
     public static event Action<Tuio11Object> onObjectAdd = delegate { };
     public static event Action<Tuio11Object> onObjectRemove = delegate { };
 
@@ -66,7 +66,7 @@ public class CustomTuio11Visualizer : MonoBehaviour
         var tuio11CursorBehaviour = Instantiate(_cursorPrefab, transform);
         tuio11CursorBehaviour.Initialize(tuioCursor);
         _customTuioBehaviours.Add(tuioCursor.SessionId, tuio11CursorBehaviour);
-        onCursorAdd.Invoke();
+        onCursorAdd.Invoke(tuioCursor);
     }
 
     private void RemoveTuioCursor(object sender, Tuio11Cursor tuioCursor)
@@ -74,7 +74,7 @@ public class CustomTuio11Visualizer : MonoBehaviour
         if (_customTuioBehaviours.Remove(tuioCursor.SessionId, out var cursorBehaviour))
         {
             cursorBehaviour.Destroy();
-            onCursorRemove.Invoke();
+            onCursorRemove.Invoke(tuioCursor);
         }
     }
 
