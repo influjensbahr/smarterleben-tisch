@@ -6,17 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/_scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 0
     path: Assets/_scenes/base.unity
     guid: 807cd65fd8c95a74dbb50f069e75aa71
-  - enabled: 0
-    path: Assets/_scenes/scene_files/spaceship_controlroom.unity
-    guid: 51e44988bec79c44690ab8ecd3f498a6
-  - enabled: 0
-    path: Assets/_scenes/scene_files/spaceship_overview.unity
-    guid: 3c6a4d70d4e8efc468dfd4fd00648fa8
   - enabled: 0
     path: Assets/_scenes/scene_files/main_menu.unity
     guid: 63a344d57cf39c34c8df6a22ce52f819

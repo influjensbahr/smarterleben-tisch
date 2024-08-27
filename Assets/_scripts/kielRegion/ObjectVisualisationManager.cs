@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using TMPro;
 using TuioNet.Tuio11;
 using UnityEngine;
@@ -15,13 +16,14 @@ public struct ObjectMapping
 
 public class ObjectVisualisationManager : MonoBehaviour
 {
-    [SerializeField] private ProjectInfosView m_ProjectInfo;
-    [SerializeField] private ProjectDataContainer m_ProjectDataContainer;
-    [SerializeField] private ObjectMapping[] m_ProjectObjectMappings;
-    [SerializeField] private float m_Radius = 100f;
-    [SerializeField] private float m_animDelay = 0.2f;
+    [SerializeField] ProjectInfosView m_ProjectInfo;
+    [SerializeField] ProjectDataContainer m_ProjectDataContainer;
+    [SerializeField] ObjectMapping[] m_ProjectObjectMappings;
+    [SerializeField] float m_Radius = 100f;
+    [SerializeField] float m_animDelay = 0.2f;
     
-    private Tuio11Object currentTuioObject = null;
+    Tuio11Object currentTuioObject = null;
+    List<ProjectInfosView> m_ProjectInfosList = new List<ProjectInfosView>();
 
     private void OnEnable()
     {
@@ -68,10 +70,31 @@ public class ObjectVisualisationManager : MonoBehaviour
                 sequence.Append(projectObject.transform.DOScale(Vector3.zero, 0f));
                 sequence.AppendInterval(i * m_animDelay);
                 sequence.Append(projectObject.transform.DOScale(Vector3.one, 0.5f));
+                //sequence.AppendCallback(() => AddFloatingEffect(projectObject.transform));
                 sequence.Play();
             }
         }
         
+    }
+
+    private void Update()
+    {
+        foreach (var project in m_ProjectInfosList)
+        {
+            project.transform.rotation = Quaternion.identity;
+        }
+    }
+
+    private void AddFloatingEffect(Transform projectTransform)
+    {
+        float floatAmount = 5f;
+        float floatDuration = 2f;
+
+        Sequence floatSequence = DOTween.Sequence();
+        floatSequence.Append(projectTransform.DOMoveY(projectTransform.position.y + floatAmount, floatDuration).SetEase(Ease.InOutSine));
+        floatSequence.Append(projectTransform.DOMoveY(projectTransform.position.y - floatAmount, floatDuration).SetEase(Ease.InOutSine));
+        floatSequence.SetLoops(-1, LoopType.Yoyo);
+        floatSequence.Play();
     }
 
     private void HideInfos(Tuio11Object tuioObject)
