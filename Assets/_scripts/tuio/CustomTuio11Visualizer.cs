@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class CustomTuio11Visualizer : MonoBehaviour
 {
-    [SerializeField] private TuioSessionBehaviour _tuioSessionBehaviour;
+    [SerializeField] private CustomTuioSessionBehaviour _tuioSessionBehaviour;
     [SerializeField] private CustomTuio11CursorTransform _cursorPrefab;
     [SerializeField] private CustomTuio11ObjectTransform _objectPrefab;
     [SerializeField] private CustomTuio11BlobTransform _blobPrefab;

@@ -44,6 +44,8 @@ public class ObjectVisualisationManager : MonoBehaviour
             return;
         }
         
+        currentTuioObject = tuioObject;
+        
         foreach (var objectMapping in m_ProjectObjectMappings)
         {
             if (objectMapping.id != tuioObject.SymbolId) continue;
@@ -79,6 +81,7 @@ public class ObjectVisualisationManager : MonoBehaviour
 
     private void Update()
     {
+        if(currentTuioObject == null) return;
         foreach (var project in m_ProjectInfosList)
         {
             project.transform.rotation = Quaternion.identity;
