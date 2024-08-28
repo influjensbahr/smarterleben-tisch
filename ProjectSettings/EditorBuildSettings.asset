@@ -6,7 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_tuio/Samples/TUIO Client/2.0.2/TUIO 2.0/Scenes/TUIO 2.0 Example
-      Scene.unity
-    guid: 0331f77c8bbcbeb44bcf72fced0804f0
+    path: Assets/_scenes/tuio_interactiveScape_kielRegion.unity
+    guid: 641587be58fbab6429d9360d1fbe14d6
   m_configObjects: {}

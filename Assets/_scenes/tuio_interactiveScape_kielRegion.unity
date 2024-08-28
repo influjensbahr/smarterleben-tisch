@@ -2816,7 +2816,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6282188938395895380}
-  - component: {fileID: 6282188938395895383}
   - component: {fileID: 6282188938395895384}
   m_Layer: 0
   m_Name: Tuio Session
@@ -2840,22 +2839,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6282188938395895383
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6282188938395895370}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 580a64d77d3d49c9baa2e5afef6a8238, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  <TuioVersion>k__BackingField: 0
-  <ConnectionType>k__BackingField: 0
-  _ipAddress: 127.0.0.1
-  <UdpPort>k__BackingField: 3333
 --- !u!114 &6282188938395895384
 MonoBehaviour:
   m_ObjectHideFlags: 0
