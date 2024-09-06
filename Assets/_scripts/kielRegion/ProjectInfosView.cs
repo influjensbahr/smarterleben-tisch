@@ -4,7 +4,7 @@ using UnityEngine;
 public class ProjectInfosView : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI m_ProjectNameText, m_ProjectDescriptionText;
-    private string m_ProjectName, m_ProjectDescription;
+    string m_ProjectName, m_ProjectDescription;
     
     public void SetProjectInfos(string projectName, string projectDescription)
     {

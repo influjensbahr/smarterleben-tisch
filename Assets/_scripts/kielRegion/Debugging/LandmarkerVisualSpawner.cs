@@ -6,7 +6,7 @@ using TuioNet.Tuio11;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LandmarkerTest : MonoBehaviour
+public class LandmarkerVisualSpawner : MonoBehaviour
 {
     [SerializeField] GameObject[] m_LandmarkerPrefab;
     [SerializeField] float m_AnimationDuration = 0.5f;

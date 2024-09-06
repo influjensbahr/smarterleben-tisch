@@ -88,6 +88,9 @@ GameObject:
   - component: {fileID: 8724772983011063330}
   - component: {fileID: 7993056541660128695}
   - component: {fileID: 1284621352313668368}
+  - component: {fileID: 3969807917253704349}
+  - component: {fileID: 6031217405880571209}
+  - component: {fileID: 8098607267880158969}
   m_Layer: 5
   m_Name: TUIO 1.1 Object
   m_TagString: Untagged
@@ -170,6 +173,47 @@ MonoBehaviour:
     category: 5
   m_Radius: 500
   m_animDelay: 0.2
+  m_RotationSpeed: 10
+--- !u!114 &3969807917253704349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8934298683102258810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e0488eef05b734ba5c3d02580e84d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiLineRenderer: {fileID: 8098607267880158969}
+  objectVisualisationManager: {fileID: 1284621352313668368}
+--- !u!222 &6031217405880571209
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8934298683102258810}
+  m_CullTransparentMesh: 1
+--- !u!114 &8098607267880158969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8934298683102258810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7d193205f7ef58408885aa1c8de230d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Points: []
+  m_Thickness: 0
 --- !u!1001 &4743807802413204040
 PrefabInstance:
   m_ObjectHideFlags: 0

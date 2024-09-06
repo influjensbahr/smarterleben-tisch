@@ -13,14 +13,14 @@ public class TUIOConnectionChecker : MonoBehaviour
     float m_timeSinceLastEvent = 0f;
     float m_timoutDuration = 5f;
 
-    private void Start()
+    void Start()
     {
         m_tuioClient = new TuioClient(TuioConnectionType.UDP, m_ipAddress);
         m_tuioClient.Connect();
         connectionStatusText.text = "Checking...";
     }
     
-    private void Update()
+    void Update()
     {
         if (m_tuioClient.IsConnected)
         {
@@ -37,7 +37,7 @@ public class TUIOConnectionChecker : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
+    void OnDestroy()
     {
         m_tuioClient.Disconnect();
     }

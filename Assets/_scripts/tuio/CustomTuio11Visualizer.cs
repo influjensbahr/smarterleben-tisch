@@ -8,30 +8,34 @@ using UnityEngine;
 
 public class CustomTuio11Visualizer : MonoBehaviour
 {
-    [SerializeField] private CustomTuioSessionBehaviour _tuioSessionBehaviour;
-    [SerializeField] private CustomTuio11CursorTransform _cursorPrefab;
-    [SerializeField] private CustomTuio11ObjectTransform _objectPrefab;
-    [SerializeField] private CustomTuio11BlobTransform _blobPrefab;
+    [SerializeField] CustomTuioSessionBehaviour _tuioSessionBehaviour;
+    [SerializeField] CustomTuio11CursorTransform _cursorPrefab;
+    [SerializeField] CustomTuio11ObjectTransform _objectPrefab;
+    [SerializeField] CustomTuio11BlobTransform _blobPrefab;
 
-    private readonly Dictionary<uint, CustomTuio11Behaviour> _customTuioBehaviours = new();
+    readonly Dictionary<uint, CustomTuio11Behaviour> _customTuioBehaviours = new();
 
-    private Tuio11Dispatcher _dispatcher;
-    private Tuio11Dispatcher Dispatcher => (Tuio11Dispatcher)_tuioSessionBehaviour.TuioDispatcher;
+    Tuio11Dispatcher _dispatcher;
+    Tuio11Dispatcher Dispatcher => (Tuio11Dispatcher)_tuioSessionBehaviour.TuioDispatcher;
     
     public static event Action<Tuio11Cursor> onCursorAdd = delegate { };
     public static event Action<Tuio11Cursor> onCursorRemove = delegate { };
+    public static event Action<Tuio11Cursor> onCursorUpdate = delegate { }; 
     public static event Action<Tuio11Object> onObjectAdd = delegate { };
     public static event Action<Tuio11Object> onObjectRemove = delegate { };
+    public static event Action<Tuio11Object> onObjectUpdate = delegate { };
 
-    private void OnEnable()
+    void OnEnable()
     {
         try
         {
             Dispatcher.OnCursorAdd += AddTuioCursor;
             Dispatcher.OnCursorRemove += RemoveTuioCursor;
+            Dispatcher.OnCursorUpdate += UpdateTuioCursor;
 
             Dispatcher.OnObjectAdd += AddTuioObject;
             Dispatcher.OnObjectRemove += RemoveTuioObject;
+            Dispatcher.OnObjectUpdate += UpdateTuioObject;
 
             Dispatcher.OnBlobAdd += AddTuioBlob;
             Dispatcher.OnBlobRemove += RemoveTuioBlob;
@@ -42,15 +46,17 @@ public class CustomTuio11Visualizer : MonoBehaviour
         }
     }
 
-    private void OnDisable()
+    void OnDisable()
     {
         try
         {
             Dispatcher.OnCursorAdd -= AddTuioCursor;
             Dispatcher.OnCursorRemove -= RemoveTuioCursor;
+            Dispatcher.OnCursorUpdate -= UpdateTuioCursor;
 
             Dispatcher.OnObjectAdd -= AddTuioObject;
             Dispatcher.OnObjectRemove -= RemoveTuioObject;
+            Dispatcher.OnObjectUpdate -= UpdateTuioObject;
 
             Dispatcher.OnBlobAdd -= AddTuioBlob;
             Dispatcher.OnBlobRemove -= RemoveTuioBlob;
@@ -61,7 +67,7 @@ public class CustomTuio11Visualizer : MonoBehaviour
         }
     }
 
-    private void AddTuioCursor(object sender, Tuio11Cursor tuioCursor)
+    void AddTuioCursor(object sender, Tuio11Cursor tuioCursor)
     {
         var tuio11CursorBehaviour = Instantiate(_cursorPrefab, transform);
         tuio11CursorBehaviour.Initialize(tuioCursor);
@@ -69,7 +75,7 @@ public class CustomTuio11Visualizer : MonoBehaviour
         onCursorAdd.Invoke(tuioCursor);
     }
 
-    private void RemoveTuioCursor(object sender, Tuio11Cursor tuioCursor)
+    void RemoveTuioCursor(object sender, Tuio11Cursor tuioCursor)
     {
         if (_customTuioBehaviours.Remove(tuioCursor.SessionId, out var cursorBehaviour))
         {
@@ -77,8 +83,16 @@ public class CustomTuio11Visualizer : MonoBehaviour
             onCursorRemove.Invoke(tuioCursor);
         }
     }
+    
+    void UpdateTuioCursor(object sender, Tuio11Cursor tuioCursor)
+    {
+        if (_customTuioBehaviours.TryGetValue(tuioCursor.SessionId, out var cursorBehaviour))
+        {
+            onCursorUpdate.Invoke(tuioCursor);
+        }
+    }
 
-    private void AddTuioObject(object sender, Tuio11Object tuioObject)
+    void AddTuioObject(object sender, Tuio11Object tuioObject)
     {
         var objectBehaviour = Instantiate(_objectPrefab, transform);
         objectBehaviour.Initialize(tuioObject);
@@ -86,7 +100,7 @@ public class CustomTuio11Visualizer : MonoBehaviour
         onObjectAdd.Invoke(tuioObject);
     }
 
-    private void RemoveTuioObject(object sender, Tuio11Object tuioObject)
+    void RemoveTuioObject(object sender, Tuio11Object tuioObject)
     {
         if (_customTuioBehaviours.Remove(tuioObject.SessionId, out var objectBehaviour))
         {
@@ -94,15 +108,23 @@ public class CustomTuio11Visualizer : MonoBehaviour
             objectBehaviour.Destroy();
         }
     }
+    
+    void UpdateTuioObject(object sender, Tuio11Object tuioObject)
+    {
+        if (_customTuioBehaviours.TryGetValue(tuioObject.SessionId, out var objectBehaviour))
+        {
+            onObjectUpdate.Invoke(tuioObject);
+        }
+    }
 
-    private void AddTuioBlob(object sender, Tuio11Blob tuioBlob)
+    void AddTuioBlob(object sender, Tuio11Blob tuioBlob)
     {
         var blobBehaviour = Instantiate(_blobPrefab, transform);
         blobBehaviour.Initialize(tuioBlob);
         _customTuioBehaviours.Add(tuioBlob.SessionId, blobBehaviour);
     }
 
-    private void RemoveTuioBlob(object sender, Tuio11Blob tuioBlob)
+    void RemoveTuioBlob(object sender, Tuio11Blob tuioBlob)
     {
         if (_customTuioBehaviours.Remove(tuioBlob.SessionId, out var blobBehaviour))
         {
