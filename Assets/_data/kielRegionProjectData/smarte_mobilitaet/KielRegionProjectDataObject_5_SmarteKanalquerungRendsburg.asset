@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 5
   title: Smarte Kanalquerung Rendsburg
-  projectImage: {fileID: 21300000, guid: 5d812d41b123dbe449f1b34f244b65a7, type: 3}
+  projectImage: []
   projectParentCategory: 0
   shortDescription: "Durch den Einsatz von Sensorentechnik wird die aktuelle Auslastung
     aller m\xF6glichen Kanalquerungen in Rendsburg erfasst, um basierend darauf fr\xFChzeitig

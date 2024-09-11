@@ -1,12 +1,14 @@
+using OTBT.Framework.Utils;
 using System;
 using System.Collections.Generic;
 using TuioNet.Common;
 using TuioNet.Tuio11;
 using TuioUnity.Common;
 using TuioUnity.Tuio11;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
-public class CustomTuio11Visualizer : MonoBehaviour
+public class CustomTuio11Visualizer : Singleton<CustomTuio11Visualizer>
 {
     [SerializeField] CustomTuioSessionBehaviour _tuioSessionBehaviour;
     [SerializeField] CustomTuio11CursorTransform _cursorPrefab;
@@ -24,6 +26,30 @@ public class CustomTuio11Visualizer : MonoBehaviour
     public static event Action<Tuio11Object> onObjectAdd = delegate { };
     public static event Action<Tuio11Object> onObjectRemove = delegate { };
     public static event Action<Tuio11Object> onObjectUpdate = delegate { };
+
+    [SerializeField] List<CategoryIcons> m_CategoryIcons = new List<CategoryIcons>();
+    public List<ObjectVisualisationManager> objectVisManagers = new List<ObjectVisualisationManager>();
+
+    private void Update()
+    {
+        foreach(var icon in m_CategoryIcons)
+        {
+            bool hasOneObject = false;
+            foreach(var objViz in objectVisManagers)
+                if(objViz.category == icon.category)
+                {
+                    hasOneObject = true;
+                    break;
+                }
+            if(hasOneObject)
+            {
+                icon.Show();
+            } else
+            {
+                icon.Hide();
+            }
+        }
+    }
 
     void OnEnable()
     {
@@ -105,7 +131,7 @@ public class CustomTuio11Visualizer : MonoBehaviour
         if (_customTuioBehaviours.Remove(tuioObject.SessionId, out var objectBehaviour))
         {
             onObjectRemove.Invoke(tuioObject);
-            objectBehaviour.Destroy();
+            //objectBehaviour.Destroy();
         }
     }
     

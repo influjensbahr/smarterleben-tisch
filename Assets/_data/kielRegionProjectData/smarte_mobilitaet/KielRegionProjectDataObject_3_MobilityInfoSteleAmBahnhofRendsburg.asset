@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   title: Mobility Info Stele am Bahnhof Rendsburg
-  projectImage: {fileID: 21300000, guid: 5d812d41b123dbe449f1b34f244b65a7, type: 3}
+  projectImage:
+  - {fileID: 21300000, guid: 23043acb32496d94290c17880d13fe5a, type: 3}
   projectParentCategory: 0
   shortDescription: "Die Digitale Stele bietet den Nutzer*innen auf einer interaktiven
     Touch-Bedienoberfl\xE4che die M\xF6glichkeit, sich mit Echtzeit-Daten zu den

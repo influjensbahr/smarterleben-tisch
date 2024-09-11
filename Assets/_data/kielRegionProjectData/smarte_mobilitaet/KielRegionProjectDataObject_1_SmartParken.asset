@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   title: Smart Parken
-  projectImage: {fileID: 21300000, guid: 5d812d41b123dbe449f1b34f244b65a7, type: 3}
+  projectImage:
+  - {fileID: 21300000, guid: 2bee8ba76447c204cb240adf9c2327cf, type: 3}
   projectParentCategory: 0
   shortDescription: "In der Sofortma\xDFnahme Smart Parken wurde ein Pilotprojekt
     zur Mehrfachnutzung von Unternehmens-Parkfl\xE4chen, die Anwohnerinnen au\xDFerhalb

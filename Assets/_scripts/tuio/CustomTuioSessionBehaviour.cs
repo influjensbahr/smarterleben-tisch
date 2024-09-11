@@ -15,7 +15,6 @@ public class CustomTuioSessionBehaviour : MonoBehaviour
     [field: SerializeField] public TuioConnectionType ConnectionType { get; set; } = TuioConnectionType.UDP;
     [SerializeField] private string _ipAddress = "10.0.0.20";
     [field: SerializeField] public int UdpPort { get; set; } = 3333;
-    [SerializeField] private TextMeshProUGUI m_IpAddessDebugField;
 
     private TuioSession _session;
     private bool _isInitialized;
@@ -91,7 +90,6 @@ public class CustomTuioSessionBehaviour : MonoBehaviour
     private void Update()
     {
         _session.ProcessMessages();
-        m_IpAddessDebugField.text = _ipAddress;
     }
 
     private void OnApplicationQuit()

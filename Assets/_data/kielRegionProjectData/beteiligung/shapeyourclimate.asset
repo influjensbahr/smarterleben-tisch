@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27e69e2010236ec408b237c663abd8c7, type: 3}
+  m_Name: shapeyourclimate
+  m_EditorClassIdentifier: 
+  id: 3
+  title: ShapeyourClimate@KielRegion
+  projectImage: []
+  projectParentCategory: 4
+  shortDescription: "Das Klimaforum am Kieler Europaplatz wurde 2022 durch das Projekt
+    \u201EShapeYourClimate@KielRegion\u201C um digitale und \u201Esmarte\u201C Elemente
+    wie Virtual Reality und Citizen Science erweitert, um es interaktiver und f\xFCr
+    neue Zielgruppen attraktiv zu gestalten. Die partizipative Einbindung der KielRegion
+    und Veranstaltungen zu digitalen Themen sollen die \xDCbertragbarkeit der Ma\xDFnahmen
+    sichern."
+  additionalInfo: 
+  projectLocation: {x: 0, y: 0}

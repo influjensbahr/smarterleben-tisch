@@ -6,7 +6,7 @@ public class CreateLineRenderer : MonoBehaviour
 {
     [SerializeField] UILineRenderer uiLineRenderer;
     [SerializeField] ObjectVisualisationManager objectVisualisationManager;
-    List<ProjectInfosView> projectInfoClones;
+    List<ProjectInfoButton> projectInfoClones;
 
     void Start()
     {

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,7 +7,7 @@ public class KielRegionProjectDataObject : ScriptableObject
 {
     public uint id;
     public string title;
-    public Sprite projectImage;
+    public List<Sprite> projectImage;
     public ProjectCategory projectParentCategory;
     [TextArea(3, 10)] public string shortDescription;
     [TextArea(3, 10)] public string additionalInfo;

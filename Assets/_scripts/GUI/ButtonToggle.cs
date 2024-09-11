@@ -1,10 +1,12 @@
 using TuioNet.Tuio11;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ButtonToggle : MonoBehaviour
 {
-    [SerializeField] GameObject m_targetObject;
-    [SerializeField] bool m_isActive = false;
+    [SerializeField] Button m_TargetButton = default;
+    [SerializeField] RectTransform m_TargetClickArea = default;
+    [SerializeField] CanvasGroup m_CanvasGroupInteractibility = default;
 
     private void OnEnable()
     {
@@ -16,28 +18,18 @@ public class ButtonToggle : MonoBehaviour
         CustomTuio11Visualizer.onCursorAdd -= Toggle;
     }
 
-    void Start()
-    {
-        m_targetObject.SetActive(m_isActive);
-    }
 
     void Toggle(Tuio11Cursor tuioCursor)
     {
+        if (m_CanvasGroupInteractibility != null)
+            if (!m_CanvasGroupInteractibility.interactable)
+                return;
+
         Vector2 touchPosition = new Vector2(tuioCursor.Position.X * Screen.width, Screen.height - tuioCursor.Position.Y * Screen.height);
-        
-        if (m_targetObject.activeSelf)
+
+        if (RectTransformUtility.RectangleContainsScreenPoint(m_TargetClickArea, touchPosition))
         {
-            if (RectTransformUtility.RectangleContainsScreenPoint(m_targetObject.GetComponent<RectTransform>(), touchPosition))
-            {
-                m_targetObject.SetActive(false);
-            }
-        }
-        else
-        {
-            if (RectTransformUtility.RectangleContainsScreenPoint(GetComponent<RectTransform>(), touchPosition))
-            {
-                m_targetObject.SetActive(true);
-            }
+            m_TargetButton.onClick?.Invoke();
         }
     }
 }
