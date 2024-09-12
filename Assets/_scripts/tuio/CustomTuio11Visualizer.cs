@@ -49,6 +49,11 @@ public class CustomTuio11Visualizer : Singleton<CustomTuio11Visualizer>
                 icon.Hide();
             }
         }
+
+        foreach(var viz in objectVisManagers)
+        {
+            viz.SetMode(objectVisManagers.Count > 1 ? ObjectVisualisationManager.ArrangementMode.List : ObjectVisualisationManager.ArrangementMode.Circle);
+        }
     }
 
     void OnEnable()
@@ -122,6 +127,9 @@ public class CustomTuio11Visualizer : Singleton<CustomTuio11Visualizer>
     {
         var objectBehaviour = Instantiate(_objectPrefab, transform);
         objectBehaviour.Initialize(tuioObject);
+        var objVizManager = objectBehaviour.GetComponent<ObjectVisualisationManager>();
+        if (objVizManager)
+            objVizManager.canvasRectTransform = this.transform as RectTransform;
         _customTuioBehaviours.Add(tuioObject.SessionId, objectBehaviour);
         onObjectAdd.Invoke(tuioObject);
     }
