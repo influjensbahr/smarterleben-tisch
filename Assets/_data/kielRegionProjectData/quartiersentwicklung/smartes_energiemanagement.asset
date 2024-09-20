@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 2
   title: Smartes Energiemanagement
   projectImage:
-  - {fileID: 21300000, guid: 8cea62b7c974bab46ab4b7c1fbba8317, type: 3}
+  - {fileID: 21300000, guid: b75f2bfcc42a270459bb08bb8d36a2d9, type: 3}
   projectParentCategory: 1
   shortDescription: "Es wurde ein Monitoring-System zur \xDCberwachung aller Energietr\xE4ger
     im Hohen bzw. Niederem Arsenal in Rendsburg eingef\xFChrt, um den Energieverbrauch

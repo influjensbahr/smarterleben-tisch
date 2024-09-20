@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 5
   title: Erlebnispfad Digitales Dorf(er)leben
-  projectImage: []
+  projectImage:
+  - {fileID: 21300000, guid: 99edba3a6826697469280f840f448418, type: 3}
   projectParentCategory: 1
   shortDescription: "Auf dem Hof Viehbrook bei Wankendorf wurde ein interaktiver
     Erlebnispfad eingerichtet, der die M\xF6glichkeiten von Digitalisierung, Mobilit\xE4t

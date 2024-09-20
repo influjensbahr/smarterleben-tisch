@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   title: "Beteiligungs\xF6kosystem"
-  projectImage: []
+  projectImage:
+  - {fileID: 21300000, guid: b765f8ace1691224aba7df513e0c4cb5, type: 3}
   projectParentCategory: 4
   shortDescription: "Viele digitale Tools unterst\xFCtzen Kommunen bei der B\xFCrgerbeteiligung
     in der Stadtentwicklung. Das Problem: Sie funktionieren oft isoliert und bieten

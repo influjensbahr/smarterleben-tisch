@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 3
   title: "Smarte und \xF6kologische Gasse im Zentrum von Nortorf"
   projectImage:
-  - {fileID: 21300000, guid: 2be0b3c9124417e49935dc9fcca41a8f, type: 3}
+  - {fileID: 21300000, guid: f1988e87a3f81744aa29b07e37d6edcc, type: 3}
   projectParentCategory: 1
   shortDescription: "Im Zentrum von Nortorf wurde eine intelligente Stra\xDFenbeleuchtung
     im \u201EKatzenstieg\u201C installiert, um Energie zu sparen und die Lichtverschmutzung

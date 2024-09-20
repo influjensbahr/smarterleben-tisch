@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   title: "Hackathon K\xFCsten- und Meeresschutz"
-  projectImage: []
+  projectImage:
+  - {fileID: 21300000, guid: f6b29c702b9e92b45b95d4e6ec56a16b, type: 3}
+  - {fileID: 21300000, guid: b4cd39cea08e5ee4b9eddb8a7d9565d1, type: 3}
   projectParentCategory: 2
   shortDescription: "Beim Hackathon K\xFCsten- und Meeresschutz arbeiteten Programmierer,
     Designer und Fachleute gemeinsam, um neue Ideen und L\xF6sungen f\xFCr den Schutz

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 5
   title: Beteiligungstelefon
-  projectImage: []
+  projectImage:
+  - {fileID: 21300000, guid: 7e56b32e0e7d4fe49b497ee4679e5d64, type: 3}
   projectParentCategory: 4
   shortDescription: "Auch weniger digital-affinen B\xFCrger*innen wird die Teilnahme
     an Partizipationsprozessen erm\xF6glicht, indem sie ihre Ideen per Telefon einsprechen

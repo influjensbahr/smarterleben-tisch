@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 2
   title: Parklets
   projectImage:
-  - {fileID: 21300000, guid: 4ec386c7be2de2f45a673f0976de3146, type: 3}
+  - {fileID: 21300000, guid: 54643d94ab3eb9e4e9a76c0e6713a614, type: 3}
   projectParentCategory: 0
   shortDescription: "Wo vorher nur ein Auto stehen konnte, erm\xF6glichen Parklets
     neue M\xF6glichkeiten und Impulse im Zusammenleben im st\xE4dtischen Raum und

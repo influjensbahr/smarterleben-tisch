@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 8
   title: Smarte Wasserplanung im Quartier
   projectImage:
-  - {fileID: 21300000, guid: 5df5dc079e724374d9189ea78b5d572e, type: 3}
+  - {fileID: 21300000, guid: 13d07447c49937546b698db279f135c7, type: 3}
   projectParentCategory: 1
   shortDescription: "Der Klimawandel bringt mehr extreme Wetterereignisse wie Starkregen
     und D\xFCrren, die Siedlungen stark belasten. Um besser reagieren zu k\xF6nnen,

@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 4
   title: Raum X - ein Zukunftslabor
   projectImage:
-  - {fileID: 21300000, guid: ada2f186803f54e4abe5c3ebebf8c276, type: 3}
+  - {fileID: 21300000, guid: 3b1ed72b263a103419070165e05342dd, type: 3}
   projectParentCategory: 1
   shortDescription: "In Kiel wurde ein Zukunftslabor namens Raum X zur Quartiersentwicklung
     eingerichtet, das als Impulsraum f\xFCr Stadtforscher, K\xFCnstler, Kreative,

@@ -44,10 +44,24 @@ public class CustomTuioSessionBehaviour : MonoBehaviour
         if (_isInitialized) return;
         
         string path = Path.Combine(Application.streamingAssetsPath, "ip_address.txt");
-        if(File.Exists(path))
+        if (File.Exists(path))
+        {
             _ipAddress = File.ReadAllText(path);
+            Debug.Log("Loaded ip: " + _ipAddress);
+        }
         
         var port = UdpPort;
+        string path2 = Path.Combine(Application.streamingAssetsPath, "port.txt");
+        if (File.Exists(path2))
+        {
+            if(int.TryParse(File.ReadAllText(path2), out int portRead))
+            {
+                Debug.Log("Loaded port: " + portRead);
+                port = portRead;
+            }
+            
+        }
+
         if (ConnectionType == TuioConnectionType.Websocket)
         {
             port = TuioVersion switch

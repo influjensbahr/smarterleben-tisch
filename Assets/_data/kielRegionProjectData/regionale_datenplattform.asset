@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   title: Regionale Datenplattform
-  projectImage: []
+  projectImage:
+  - {fileID: 21300000, guid: 5dff8eea5dd2d5448a64eb034ba7cb90, type: 3}
   projectParentCategory: 5
   shortDescription: "Die Regionale Datenplattform ist die zentrale digitale Infrastruktur
     im Projekt SmarterLeben und unterst\xFCtzt innovative Anwendungsf\xE4lle in den

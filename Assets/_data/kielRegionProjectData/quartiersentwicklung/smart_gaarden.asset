@@ -15,6 +15,7 @@ MonoBehaviour:
   id: 1
   title: Smart Gaarden
   projectImage:
+  - {fileID: 21300000, guid: 89599ab73806e7b4497914bb2cc13988, type: 3}
   - {fileID: 21300000, guid: 496ca8494233bd24aace40e2fc14d120, type: 3}
   projectParentCategory: 1
   shortDescription: "Das abgeschlossene Projekt \u201ESmart Gaarden\u201C f\xF6rderte
