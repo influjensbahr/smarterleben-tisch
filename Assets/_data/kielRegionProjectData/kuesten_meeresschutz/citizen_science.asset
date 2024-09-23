@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27e69e2010236ec408b237c663abd8c7, type: 3}
+  m_Name: citizen_science
+  m_EditorClassIdentifier: 
+  id: 7
+  title: Citizen Science
+  projectImage: []
+  projectParentCategory: 2
+  shortDescription: "Das Citizen Science Projekt l\xE4dt B\xFCrger*innen, insbesondere
+    Kinder und Jugendliche, ein, aktiv am K\xFCsten- und Meeresschutz in der Region
+    mitzuwirken. Durch die Nutzung digitaler Tools und die Zusammenarbeit mit Forschungseinrichtungen
+    sollen sie Daten \xFCber den Zustand der Ostseek\xFCste sammeln und L\xF6sungen
+    erarbeiten, um das Bewusstsein f\xFCr den K\xFCstenschutz zu st\xE4rken. Die
+    Ergebnisse werden in Projekten wie dem K\xFCstenlehrpfad und auf kommunalen Webseiten
+    pr\xE4sentiert werden."
+  additionalInfo: 
+  projectLocation: {x: 0, y: 0}

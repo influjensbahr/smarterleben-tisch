@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27e69e2010236ec408b237c663abd8c7, type: 3}
+  m_Name: KielRegionProjectDataObject_2_Parklets
+  m_EditorClassIdentifier: 
+  id: 2
+  title: Parklets
+  projectImage:
+  - {fileID: 21300000, guid: 54643d94ab3eb9e4e9a76c0e6713a614, type: 3}
+  projectParentCategory: 0
+  shortDescription: "Wo vorher nur ein Auto stehen konnte, erm\xF6glichen Parklets
+    neue M\xF6glichkeiten und Impulse im Zusammenleben im st\xE4dtischen Raum und
+    steigern die Lebensqualit\xE4t. Die designten \u201CErholungsinseln\u201D k\xF6nnen
+    f\xFCr unterschiedliche Zwecke genutzt werden und sind in einem moderierten Beteiligungsprozess
+    nach den W\xFCnschen von B\xFCrger*innen entwickelt worden.\r"
+  additionalInfo: 
+  projectLocation: {x: 0, y: 0}

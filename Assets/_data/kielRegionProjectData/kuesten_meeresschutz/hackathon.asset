@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27e69e2010236ec408b237c663abd8c7, type: 3}
+  m_Name: hackathon
+  m_EditorClassIdentifier: 
+  id: 1
+  title: "Hackathon K\xFCsten- und Meeresschutz"
+  projectImage:
+  - {fileID: 21300000, guid: f6b29c702b9e92b45b95d4e6ec56a16b, type: 3}
+  - {fileID: 21300000, guid: b4cd39cea08e5ee4b9eddb8a7d9565d1, type: 3}
+  projectParentCategory: 2
+  shortDescription: "Beim Hackathon K\xFCsten- und Meeresschutz arbeiteten Programmierer,
+    Designer und Fachleute gemeinsam, um neue Ideen und L\xF6sungen f\xFCr den Schutz
+    der K\xFCsten und Meere zu entwickeln. Ziel war es, verschiedene Akteure in der
+    Region zu vernetzen und das Interesse der Bev\xF6lkerung an der Gestaltung des
+    Lebensraums K\xFCste zu f\xF6rdern. Dabei entstanden sieben konkrete L\xF6sungen,
+    von denen einige bereits umgesetzt werden."
+  additionalInfo: 
+  projectLocation: {x: 0, y: 0}

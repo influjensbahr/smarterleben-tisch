@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27e69e2010236ec408b237c663abd8c7, type: 3}
+  m_Name: spielerische_datenvisualisierung
+  m_EditorClassIdentifier: 
+  id: 6
+  title: Spielerische Datenvisualisierungen
+  projectImage: []
+  projectParentCategory: 2
+  shortDescription: "Die spielerische Datenvisualisierung zielt darauf ab, B\xFCrger*innen
+    f\xFCr ihre Rolle im K\xFCstenschutz zu sensibilisieren, indem komplexe Themen
+    vereinfacht und zug\xE4nglicher gemacht werden. Ein Beispiel ist der geplante
+    Smarte K\xFCstenlehrpfad, der es erm\xF6glicht, K\xFCstenwege interaktiv und
+    spielerisch zu erkunden.\r\n    \u2022 Citizen Science"
+  additionalInfo: 
+  projectLocation: {x: 0, y: 0}

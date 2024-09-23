@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27e69e2010236ec408b237c663abd8c7, type: 3}
+  m_Name: seaweed_underwater
+  m_EditorClassIdentifier: 
+  id: 3
+  title: Seaweed Underwater Planting Project
+  projectImage: []
+  projectParentCategory: 2
+  shortDescription: "Das Projekt st\xE4rkte das Bewusstsein f\xFCr die Bedeutung
+    von Seegras und dessen Rolle im K\xFCstenschutz. Neben einer Sammelaktion und
+    einer Seegras-Station mit Aquarien wurde eine Virtual-Reality-Erfahrung entwickelt,
+    die es Nicht-Tauchern erm\xF6glicht, die Unterwasserwelt ihrer Region virtuell
+    zu erkunden."
+  additionalInfo: 
+  projectLocation: {x: 0, y: 0}

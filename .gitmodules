@@ -1,0 +1,12 @@
+[submodule "Assets/Sparrow/Debug/modules"]
+	path = Assets/Sparrow/Debug/modules
+	url = https://git.beatentrack.games/OTBT/framework-debug.git
+[submodule "Assets/Sparrow/Verification/modules"]
+	path = Assets/Sparrow/Verification/modules
+	url = https://git.beatentrack.games/OTBT/framework-verify.git
+[submodule "Assets/Sparrow/VolumetricLights"]
+	path = Assets/Sparrow/VolumetricLights
+	url = https://git.beatentrack.games/OTBT/framework-volumetric-lights.git
+[submodule "Assets/Sparrow/Utilities"]
+	path = Assets/Sparrow/Utilities
+	url = https://git.beatentrack.games/OTBT/framework-shared-tools.git

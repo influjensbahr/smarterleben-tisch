@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27e69e2010236ec408b237c663abd8c7, type: 3}
+  m_Name: smarte_und_oekologische_gasse
+  m_EditorClassIdentifier: 
+  id: 3
+  title: "Smarte und \xF6kologische Gasse im Zentrum von Nortorf"
+  projectImage:
+  - {fileID: 21300000, guid: f1988e87a3f81744aa29b07e37d6edcc, type: 3}
+  projectParentCategory: 1
+  shortDescription: "Im Zentrum von Nortorf wurde eine intelligente Stra\xDFenbeleuchtung
+    im \u201EKatzenstieg\u201C installiert, um Energie zu sparen und die Lichtverschmutzung
+    zu reduzieren. Sensoren aktivieren das Licht nur bei Bedarf, was zus\xE4tzlich
+    Insekten sch\xFCtzt und zum Naturschutz beitr\xE4gt."
+  additionalInfo: 
+  projectLocation: {x: 0, y: 0}

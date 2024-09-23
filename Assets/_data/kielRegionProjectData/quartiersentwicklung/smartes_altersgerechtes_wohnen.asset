@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27e69e2010236ec408b237c663abd8c7, type: 3}
+  m_Name: smartes_altersgerechtes_wohnen
+  m_EditorClassIdentifier: 
+  id: 6
+  title: Smartes und altersgerechtes Wohnen im Quartier Marthas Insel
+  projectImage:
+  - {fileID: 21300000, guid: 30ce6fd7c86c7e5418ce364e6c713f3f, type: 3}
+  projectParentCategory: 1
+  shortDescription: "Um Menschen ein selbstbestimmtes Leben im eigenen Zuhause bis
+    ins hohe Alter zu erm\xF6glichen, werden in sechs Wohnungen digitale Assistenzsysteme
+    wie Sturzsensoren mit Notruf, Kommunikationsm\xF6glichkeiten und automatisierte
+    Beleuchtung installiert. Zus\xE4tzlich ist im Quartiersb\xFCro \u201EMarthas
+    Treff\u201C eine Informationsausstellung geplant, die diese Technologien vorstellt
+    und \xFCber deren Nutzen informiert."
+  additionalInfo: 
+  projectLocation: {x: 0, y: 0}

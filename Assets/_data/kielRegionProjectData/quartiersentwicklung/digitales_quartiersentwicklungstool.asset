@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27e69e2010236ec408b237c663abd8c7, type: 3}
+  m_Name: digitales_quartiersentwicklungstool
+  m_EditorClassIdentifier: 
+  id: 7
+  title: "Digitales Quartiersentwicklungstool am Beispiel W\xE4rme"
+  projectImage:
+  - {fileID: 21300000, guid: adb0f93484c4f5544ab0c58ed28d7265, type: 3}
+  projectParentCategory: 1
+  shortDescription: "Das Open Source Urban Building Energy Model (UBEM) f\xFCr die
+    KielRegion soll einen offenen Datenservice zur detaillierten Simulation von Heiz-
+    und K\xFChlbedarf von Geb\xE4uden bieten. Dieses Tool unterst\xFCtzt kommunale
+    Mitarbeitende bei der Planung von Nahw\xE4rmenetzen und energetischen Sanierungen,
+    indem es datenbasierte Szenarien f\xFCr die kommunale W\xE4rmeplanung und Quartiersentwicklung
+    bereitstellt."
+  additionalInfo: 
+  projectLocation: {x: 0, y: 0}
