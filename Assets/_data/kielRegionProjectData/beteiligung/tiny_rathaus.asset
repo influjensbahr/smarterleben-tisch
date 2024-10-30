@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   title: Tiny Rathaus
-  projectImage: []
+  projectImage:
+  - {fileID: 21300000, guid: bfd1394944f361f4a93d8e0bad4a7432, type: 3}
   projectParentCategory: 4
   shortDescription: "Das Tiny Rathaus ist ein innovativer Raum, der lokale Macher*innen
     vernetzt, Projekte vorstellt und neue Beteiligungsformate ausprobiert. Nach zwei

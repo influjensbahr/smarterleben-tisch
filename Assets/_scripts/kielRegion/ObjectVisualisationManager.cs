@@ -17,7 +17,7 @@ public struct ObjectMapping
     {
         switch(category)
         {
-            case ProjectCategory.RegionaleDatenplattform: return "Regionale Datenplattform";
+            case ProjectCategory.RegionaleDatenplattform: return "Digitale Dienste";
             case ProjectCategory.SmarteMobilitaet: return "Smarte Mobilität";
             case ProjectCategory.Quartiersentwicklung: return "Quartiersentwicklung";
             case ProjectCategory.KuestenUndMeeresschutz: return "Küsten- und Meeresschutz";
