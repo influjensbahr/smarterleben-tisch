@@ -25,7 +25,7 @@ namespace OTBT.Framework.Utils
         {
             get
             {
-                return s_Instance != null || FindObjectOfType<T>() != null;
+                return s_Instance != null || FindAnyObjectByType<T>() != null;
             }
         }
 
@@ -48,7 +48,7 @@ namespace OTBT.Framework.Utils
             {
                 if (s_Instance == null)
                 {
-                    var objs = FindObjectsOfType(typeof(T)) as T[];
+                    var objs = FindObjectsByType<T>(FindObjectsSortMode.None);
 
                     if (objs.Length > 0)
                         s_Instance = objs[0];

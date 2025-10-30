@@ -15,16 +15,7 @@ public struct ObjectMapping
 
     public string CategoryToString()
     {
-        switch(category)
-        {
-            case ProjectCategory.RegionaleDatenplattform: return "Digitale Dienste";
-            case ProjectCategory.SmarteMobilitaet: return "Smarte Mobilität";
-            case ProjectCategory.Quartiersentwicklung: return "Quartiersentwicklung";
-            case ProjectCategory.KuestenUndMeeresschutz: return "Küsten- und Meeresschutz";
-            case ProjectCategory.Kompetenzaufbau: return "Kompetenzaufbau";
-            case ProjectCategory.Beteiligung: return "Beteiligung";
-            default: return "";
-        }
+        return ProjectDataContainer.instance.GetCategoryDisplayName(category);
     }
 }
 
@@ -114,7 +105,7 @@ public class ObjectVisualisationManager : MonoBehaviour
         return false;
     }
 
-    public async void ShowDetailInfo(ProjectInfoButton infoButton, KielRegionProjectDataObject info)
+    public async void ShowDetailInfo(ProjectInfoButton infoButton, KielRegionProjectData info)
     {
         if (m_Destroying) return;
         if (m_StateSwitchDelta > 0f) return;
@@ -168,9 +159,9 @@ public class ObjectVisualisationManager : MonoBehaviour
         {
             var ring = Instantiate(m_TriggerRing, transform.position, Quaternion.identity);
             ring.transform.SetParent(transform);
-            ring.transform.localScale = Vector3.zero; // Startgröße 0
+            ring.transform.localScale = Vector3.zero; // Startgrï¿½ï¿½e 0
             ring.gameObject.SetActive(true);
-            // Skaliere den Ring auf die gewünschte Größe
+            // Skaliere den Ring auf die gewï¿½nschte Grï¿½ï¿½e
             ring.transform.DOScale(15f, 1f);
 
             ring.DOFade(0, 1f).OnComplete(() => Destroy(ring.gameObject));
@@ -203,7 +194,7 @@ public class ObjectVisualisationManager : MonoBehaviour
             Vector3 bottomLeftCorner = new Vector3(rectTransform.parent.position.x + rectTransform.rect.width, rectTransform.parent.position.y - 80f - rectTransform.rect.height, 0);
             Vector3 bottomRightCorner = new Vector3(rectTransform.parent.position.x, rectTransform.parent.position.y - 80f - rectTransform.rect.height, 0);
 
-            // Überprüfe, ob alle diese Ecken sichtbar sind
+            // ï¿½berprï¿½fe, ob alle diese Ecken sichtbar sind
             if (IsPositionVisibleOnScreen(topLeftCorner) && IsPositionVisibleOnScreen(topRightCorner) && IsPositionVisibleOnScreen(bottomLeftCorner) && IsPositionVisibleOnScreen(bottomRightCorner))
             {
                 if (!m_InfoBottomMode)
@@ -323,7 +314,7 @@ public class ObjectVisualisationManager : MonoBehaviour
             if (objectMapping.id != tuioObject.SymbolId) continue;
 
             m_GroupCaption.text = objectMapping.CategoryToString();
-            var projects = m_ProjectDataContainer.GetProjectsByCategory(objectMapping.category);
+            var projects = ProjectDataContainer.instance.GetProjectsByCategory(objectMapping.category);
             m_Category = objectMapping.category;
             if (projects.Count <= 0) continue;
             

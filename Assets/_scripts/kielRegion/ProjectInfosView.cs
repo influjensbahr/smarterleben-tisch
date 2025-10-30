@@ -70,30 +70,30 @@ public class ProjectInfosView : MonoBehaviour
         return sequence2;
     }
 
-    public void SetProjectInfos(KielRegionProjectDataObject projectInfo)
+    public void SetProjectInfos(KielRegionProjectData projectInfo)
     {
         m_ProjectName = projectInfo.title;
         m_ProjectDescription = projectInfo.shortDescription;
         m_ProjectNameText.text = m_ProjectName;
         m_ProjectDescriptionText.text = m_ProjectDescription;
 
-        if(projectInfo.projectImage.Count > 0)
+        if(projectInfo.projectImages.Count > 0)
         {
             m_ProjectImagesBoth.SetActive(true);
             m_ProjectImageOne.gameObject.SetActive(true);
-            m_ProjectImageOne.sprite = projectInfo.projectImage[0];
-            m_ProjectImageOne.GetComponent<AspectRatioViaPreferredSize>().SetAspectRatio(projectInfo.projectImage[0].rect.width / projectInfo.projectImage[0].rect.height);
+            m_ProjectImageOne.sprite = projectInfo.projectImages[0];
+            m_ProjectImageOne.GetComponent<AspectRatioViaPreferredSize>().SetAspectRatio(projectInfo.projectImages[0].rect.width / projectInfo.projectImages[0].rect.height);
         } else
         {
             m_ProjectImageOne.gameObject.SetActive(false);
             m_ProjectImagesBoth.SetActive(false);
         }
 
-        if (projectInfo.projectImage.Count > 1)
+        if (projectInfo.projectImages.Count > 1)
         {
             m_ProjectImageTwo.gameObject.SetActive(true);
-            m_ProjectImageTwo.sprite = projectInfo.projectImage[1];
-            m_ProjectImageTwo.GetComponent<AspectRatioViaPreferredSize>().SetAspectRatio(projectInfo.projectImage[1].rect.width / projectInfo.projectImage[1].rect.height);
+            m_ProjectImageTwo.sprite = projectInfo.projectImages[1];
+            m_ProjectImageTwo.GetComponent<AspectRatioViaPreferredSize>().SetAspectRatio(projectInfo.projectImages[1].rect.width / projectInfo.projectImages[1].rect.height);
         }
         else
         {
