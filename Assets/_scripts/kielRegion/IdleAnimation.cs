@@ -4,6 +4,10 @@ using TuioNet.Tuio11;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Shows a bouncing logo and white background after a period of no TUIO input.
+/// Resets to UI when input is detected.
+/// </summary>
 public class IdleAnimation : MonoBehaviour
 {
     [SerializeField] Image whiteBackground;
@@ -15,6 +19,7 @@ public class IdleAnimation : MonoBehaviour
     float lastInputTime;
     bool isIdle;
     Vector3 direction;
+    Coroutine m_IdleRoutine;
 
     void Start()
     {
@@ -45,7 +50,7 @@ public class IdleAnimation : MonoBehaviour
     {
         if (Time.time - lastInputTime >= idleTime && !isIdle)
         {
-            StartCoroutine(ShowIdleScreen());
+            m_IdleRoutine = StartCoroutine(ShowIdleScreen());
         }
     }
 
@@ -54,7 +59,11 @@ public class IdleAnimation : MonoBehaviour
         lastInputTime = Time.time;
         if (isIdle)
         {
-            StopCoroutine(ShowIdleScreen());
+            if (m_IdleRoutine != null)
+            {
+                StopCoroutine(m_IdleRoutine);
+                m_IdleRoutine = null;
+            }
             HideIdleScreen();
         }
     }
@@ -64,7 +73,11 @@ public class IdleAnimation : MonoBehaviour
         lastInputTime = Time.time;
         if (isIdle)
         {
-            StopCoroutine(ShowIdleScreen());
+            if (m_IdleRoutine != null)
+            {
+                StopCoroutine(m_IdleRoutine);
+                m_IdleRoutine = null;
+            }
             HideIdleScreen();
         }
     }

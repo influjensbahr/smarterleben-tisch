@@ -57,10 +57,17 @@ public static class KielRegionCsvExporter
                         var dstPath = Path.Combine(imagesDir, fileName);
 
                         // Reimport texture as readable and encode to PNG bytes
-                        var readableTex = GetReadableTexture(sprite.texture);
-                        var pngBytes = readableTex.EncodeToPNG();
-                        File.WriteAllBytes(dstPath, pngBytes);
-                        imageFileNames.Add(fileName);
+                        try
+                        {
+                            var readableTex = GetReadableTexture(sprite.texture);
+                            var pngBytes = readableTex.EncodeToPNG();
+                            File.WriteAllBytes(dstPath, pngBytes);
+                            imageFileNames.Add(fileName);
+                        }
+                        catch (System.Exception ex)
+                        {
+                            Debug.LogWarning($"Failed to export image for '{a.title}' to {dstPath}: {ex.Message}");
+                        }
                     }
                 }
 

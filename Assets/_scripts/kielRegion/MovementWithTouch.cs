@@ -1,6 +1,9 @@
 using TuioNet.Tuio11;
 using UnityEngine;
 
+/// <summary>
+/// Moves the attached object to the position of incoming TUIO cursors in world space.
+/// </summary>
 public class MovementWithTouch : MonoBehaviour
 {
     /**
@@ -23,7 +26,7 @@ public class MovementWithTouch : MonoBehaviour
 
     void OnCursorEvent(Tuio11Cursor tuioCursor)
     {
-        Debug.Log($"Cursor event: {tuioCursor.CursorId}, Position: {tuioCursor.Position}");
+        //Debug.Log($"Cursor event: {tuioCursor.CursorId}, Position: {tuioCursor.Position}");
         MoveObject(tuioCursor);
     }
 
@@ -37,7 +40,7 @@ public class MovementWithTouch : MonoBehaviour
 
         Vector3 targetPosition = Camera.main.ScreenToWorldPoint(new Vector3(tuioCursor.Position.X * Screen.width, Screen.height - tuioCursor.Position.Y * Screen.height, Camera.main.nearClipPlane));
         targetPosition.z = transform.position.z;
-        Debug.Log($"Moving object to: {targetPosition}");
+        //Debug.Log($"Moving object to: {targetPosition}");
 
         transform.localPosition = targetPosition;
     }

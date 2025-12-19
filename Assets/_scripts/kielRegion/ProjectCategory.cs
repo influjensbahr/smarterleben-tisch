@@ -1,3 +1,6 @@
+/// <summary>
+/// Logical categories used to group projects and drive UI visuals.
+/// </summary>
 public enum ProjectCategory
 {
     SmarteMobilitaet,

@@ -5,6 +5,9 @@ using TuioNet.Common;
 using TuioNet.Tuio11;
 using UnityEngine;
 
+/// <summary>
+/// Simple status checker to display whether a TUIO client is connected.
+/// </summary>
 public class TUIOConnectionChecker : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI connectionStatusText;
@@ -15,16 +18,29 @@ public class TUIOConnectionChecker : MonoBehaviour
 
     void Start()
     {
-        m_tuioClient = new TuioClient(TuioConnectionType.UDP, m_ipAddress);
-        m_tuioClient.Connect();
-        connectionStatusText.text = "Checking...";
+        try
+        {
+            m_tuioClient = new TuioClient(TuioConnectionType.UDP, m_ipAddress);
+            m_tuioClient.Connect();
+            if (connectionStatusText != null) connectionStatusText.text = "Checking...";
+        }
+        catch (Exception ex)
+        {
+            Debug.LogWarning($"Failed to connect TUIO client: {ex.Message}");
+            if (connectionStatusText != null) connectionStatusText.text = "Error";
+        }
     }
     
     void Update()
     {
+        if (m_tuioClient == null)
+        {
+            return;
+        }
+
         if (m_tuioClient.IsConnected)
         {
-            connectionStatusText.text = "Connected";
+            if (connectionStatusText != null) connectionStatusText.text = "Connected";
             m_timeSinceLastEvent = 0f;
         }
         else
@@ -32,13 +48,20 @@ public class TUIOConnectionChecker : MonoBehaviour
             m_timeSinceLastEvent += Time.deltaTime;
             if (m_timeSinceLastEvent > m_timoutDuration)
             {
-                connectionStatusText.text = "Disconnected";
+                if (connectionStatusText != null) connectionStatusText.text = "Disconnected";
             }
         }
     }
 
     void OnDestroy()
     {
-        m_tuioClient.Disconnect();
+        try
+        {
+            m_tuioClient?.Disconnect();
+        }
+        catch (Exception ex)
+        {
+            Debug.LogWarning($"Error on disconnecting TUIO client: {ex.Message}");
+        }
     }
 }

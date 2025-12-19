@@ -1,0 +1,39 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-12-19T00:00:00Z",
+    "tools": [
+      { "vendor": "Manual", "name": "Authoring", "version": "1.0" }
+    ],
+    "component": {
+      "type": "application",
+      "name": "kiel-region-tuio-prototype",
+      "version": "0.1.0",
+      "licenses": [ { "license": { "id": "EUPL-1.2" } } ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "DG.Tweening (DOTween)",
+      "licenses": [ { "license": { "name": "NOASSERTION" } } ]
+    },
+    {
+      "type": "library",
+      "name": "TuioNet",
+      "licenses": [ { "license": { "name": "NOASSERTION" } } ]
+    },
+    {
+      "type": "library",
+      "name": "TuioUnity",
+      "licenses": [ { "license": { "name": "NOASSERTION" } } ]
+    },
+    {
+      "type": "library",
+      "name": "TextMeshPro",
+      "licenses": [ { "license": { "name": "NOASSERTION" } } ]
+    }
+  ]
+}

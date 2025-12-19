@@ -1,0 +1,49 @@
+publiccodeYmlVersion: "0.2.1"
+name: "KielRegion TUIO Prototype"
+releaseDate: "2025-12-19"
+softwareVersion: "0.1.0"
+applicationSuite: "KielRegion"
+platforms:
+  - web
+  - desktop
+categories:
+  - data-visualization
+  - it-development
+maintenance:
+  type: "internal"
+  contacts:
+    - name: "KielRegion"
+      email: "info@kielregion.de"
+      website: "https://www.kielregion.de/"
+licence: "EUPL-1.2"
+legal:
+  whoOwnsIP: "KielRegion"
+  authors:
+    - name: "KielRegion / Off The Beaten Track UG"
+  repoOwner: "KielRegion"
+  license: "EUPL-1.2"
+  isOpenSource: true
+localisation:
+  localisationReady: true
+  availableLanguages:
+    - de
+    - en
+description:
+  en:
+    shortDescription: "Interactive Unity prototype using TUIO for tangible/multi-touch project visualisation."
+    longDescription: |
+      Interactive prototype for tangible/multi-touch interactions using the TUIO 1.1 protocol.
+      Visualises projects by category and provides detail views. Built for reuse by municipalities.
+  de:
+    shortDescription: "Interaktiver Unity‑Prototyp mit TUIO für Tangible/Multi‑Touch‑Projektvisualisierung."
+    longDescription: |
+      Interaktiver Prototyp für Tangible/Multi‑Touch‑Interaktionen mit dem TUIO‑Protokoll (1.1).
+      Visualisiert Projekte nach Kategorien und zeigt Detailansichten. Zur Nachnutzung durch Kommunen gedacht.
+intendedAudience:
+  countries:
+    - DE
+  scope:
+    - local-authorities
+    - public-services
+developmentStatus: "beta"
+softwareType: "application"

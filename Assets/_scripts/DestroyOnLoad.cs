@@ -11,13 +11,18 @@ using UnityEngine;
 namespace OTBT.Framework.Utils
 {
     /// <summary>
-    /// Destroys the GameObject on Build.
+    /// Removes the GameObject once the scene starts running.
+    /// Uses Destroy in player builds and DestroyImmediate in editor for immediate cleanup.
     /// </summary>
     public class DestroyOnLoad : MonoBehaviour
     {
         public void Start()
         {
+#if UNITY_EDITOR
             DestroyImmediate(gameObject);
+#else
+            Destroy(gameObject);
+#endif
         }
 
     }

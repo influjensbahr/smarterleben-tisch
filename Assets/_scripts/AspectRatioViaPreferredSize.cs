@@ -8,6 +8,9 @@ namespace OTBT.Framework.UI
 {
     [RequireComponent(typeof(LayoutElement))]
     [RequireComponent(typeof(RectTransform))]
+    /// <summary>
+    /// Keeps a UI element's preferred size in a desired aspect ratio, optionally forcing the RectTransform size.
+    /// </summary>
     public class AspectRatioViaPreferredSize : MonoBehaviour, IExtendDefaultEditor
     {
         enum Mode { WidthControlsHeight, HeightControlsWidth, WidthControlsHeightForce, HeightControlsWidthForce }
@@ -41,6 +44,12 @@ namespace OTBT.Framework.UI
 
         void UpdateDisplay()
         {
+            if (m_LayoutElement == null || m_RectTransform == null)
+            {
+                m_LayoutElement = GetComponent<LayoutElement>();
+                m_RectTransform = GetComponent<RectTransform>();
+                if (m_LayoutElement == null || m_RectTransform == null) return;
+            }
             Vector2 size = m_RectTransform.sizeDelta;
             switch (m_ScaleMode)
             {

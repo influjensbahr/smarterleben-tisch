@@ -4,6 +4,9 @@ using System.IO;
 using UnityEngine;
 using OTBT.Framework.Utils;
 
+/// <summary>
+/// Central access point for project data and display names loaded from StreamingAssets.
+/// </summary>
 public class ProjectDataContainer : Singleton<ProjectDataContainer>
 {
     [SerializeField] string m_CsvFileName = "projects.csv";
@@ -19,7 +22,7 @@ public class ProjectDataContainer : Singleton<ProjectDataContainer>
 
     public List<KielRegionProjectData> GetProjectsByCategory(ProjectCategory category)
     {
-        Debug.Log("Data fetch: have " + m_projects.Count + " projexcts!");
+        Debug.Log("Data fetch: have " + m_projects.Count + " projects loaded.");
         return m_projects.Where(projectDataObject => projectDataObject.projectParentCategory == category).ToList();
     }
 

@@ -6,6 +6,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Displays details for a project with simple entrance/exit animations and optional images.
+/// </summary>
 public class ProjectInfosView : MonoBehaviour
 {
     [SerializeField] Image m_ArrowLeft = default;
@@ -25,31 +28,47 @@ public class ProjectInfosView : MonoBehaviour
 
     private void Start()
     {
-        m_MainCanvasGroup.alpha = 0f;
-        m_MainCanvasGroup.interactable = false;
-        m_LeftArrowStart = m_ArrowLeft.rectTransform.anchoredPosition;
-        m_ArrowLeft.DOFade(0f, 0f);
-        m_ArrowRight.DOFade(0f, 0f);
+        if (m_MainCanvasGroup != null)
+        {
+            m_MainCanvasGroup.alpha = 0f;
+            m_MainCanvasGroup.interactable = false;
+        }
+        if (m_ArrowLeft != null)
+        {
+            m_LeftArrowStart = m_ArrowLeft.rectTransform.anchoredPosition;
+            m_ArrowLeft.DOFade(0f, 0f);
+        }
+        if (m_ArrowRight != null)
+        {
+            m_ArrowRight.DOFade(0f, 0f);
+        }
     }
 
     public void Show(bool showHideButton = true)
     {
-        m_HideButton.SetActive(showHideButton);
+        if (m_HideButton != null) m_HideButton.SetActive(showHideButton);
         // Stop active tweens if any
         hideTweener?.Kill();
-        m_MainCanvasGroup.interactable = true;
+        if (m_MainCanvasGroup != null) m_MainCanvasGroup.interactable = true;
 
         // MainCanvasGroup einfaden
-        showTweener = m_MainCanvasGroup.DOFade(1f, 0.5f).OnKill(() => m_MainCanvasGroup.alpha = 1f);
+        if (m_MainCanvasGroup != null)
+            showTweener = m_MainCanvasGroup.DOFade(1f, 0.5f).OnKill(() => m_MainCanvasGroup.alpha = 1f);
 
         // Arrows bewegen und einfaden
-        m_ArrowLeft.rectTransform.anchoredPosition = m_LeftArrowStart + Vector2.left * 355f;
-        m_ArrowLeft.rectTransform.DOAnchorPosX(m_LeftArrowStart.x, 0.85f, true);
-        m_ArrowLeft.DOFade(1f, 0.5f);
+        if (m_ArrowLeft != null)
+        {
+            m_ArrowLeft.rectTransform.anchoredPosition = m_LeftArrowStart + Vector2.left * 355f;
+            m_ArrowLeft.rectTransform.DOAnchorPosX(m_LeftArrowStart.x, 0.85f, true);
+            m_ArrowLeft.DOFade(1f, 0.5f);
+        }
 
-        m_ArrowRight.rectTransform.anchoredPosition = m_LeftArrowStart + Vector2.left * 175f;
-        m_ArrowRight.rectTransform.DOAnchorPosX(m_LeftArrowStart.x + 75f, 0.85f, true);
-        m_ArrowRight.DOFade(1f, 0.5f);
+        if (m_ArrowRight != null)
+        {
+            m_ArrowRight.rectTransform.anchoredPosition = m_LeftArrowStart + Vector2.left * 175f;
+            m_ArrowRight.rectTransform.DOAnchorPosX(m_LeftArrowStart.x + 75f, 0.85f, true);
+            m_ArrowRight.DOFade(1f, 0.5f);
+        }
     }
 
     public Sequence Hide()
@@ -57,16 +76,25 @@ public class ProjectInfosView : MonoBehaviour
         // Stop active tweens if any
         showTweener?.Kill();
         var sequence2 = DOTween.Sequence();
-        m_MainCanvasGroup.interactable = false;
+        if (m_MainCanvasGroup != null) m_MainCanvasGroup.interactable = false;
         // MainCanvasGroup ausfaden
-        hideTweener = m_MainCanvasGroup.DOFade(0f, 0.5f).OnKill(() => m_MainCanvasGroup.alpha = 0f);
-        sequence2.Join(hideTweener);
+        if (m_MainCanvasGroup != null)
+        {
+            hideTweener = m_MainCanvasGroup.DOFade(0f, 0.5f).OnKill(() => m_MainCanvasGroup.alpha = 0f);
+            sequence2.Join(hideTweener);
+        }
         // Arrows bewegen und ausfaden
-        sequence2.Join(m_ArrowLeft.rectTransform.DOAnchorPosX(m_LeftArrowStart.x + 355f, 0.85f, true));
-        sequence2.Join(m_ArrowLeft.DOFade(0f, 0.5f));
+        if (m_ArrowLeft != null)
+        {
+            sequence2.Join(m_ArrowLeft.rectTransform.DOAnchorPosX(m_LeftArrowStart.x + 355f, 0.85f, true));
+            sequence2.Join(m_ArrowLeft.DOFade(0f, 0.5f));
+        }
 
-        sequence2.Join(m_ArrowRight.rectTransform.DOAnchorPosX(m_LeftArrowStart.x + 175f, 0.85f, true));
-        sequence2.Join(m_ArrowRight.DOFade(0f, 0.5f));
+        if (m_ArrowRight != null)
+        {
+            sequence2.Join(m_ArrowRight.rectTransform.DOAnchorPosX(m_LeftArrowStart.x + 175f, 0.85f, true));
+            sequence2.Join(m_ArrowRight.DOFade(0f, 0.5f));
+        }
         return sequence2;
     }
 
@@ -74,30 +102,40 @@ public class ProjectInfosView : MonoBehaviour
     {
         m_ProjectName = projectInfo.title;
         m_ProjectDescription = projectInfo.shortDescription;
-        m_ProjectNameText.text = m_ProjectName;
-        m_ProjectDescriptionText.text = m_ProjectDescription;
+        if (m_ProjectNameText != null) m_ProjectNameText.text = m_ProjectName;
+        if (m_ProjectDescriptionText != null) m_ProjectDescriptionText.text = m_ProjectDescription;
 
         if(projectInfo.projectImages.Count > 0)
         {
-            m_ProjectImagesBoth.SetActive(true);
-            m_ProjectImageOne.gameObject.SetActive(true);
-            m_ProjectImageOne.sprite = projectInfo.projectImages[0];
-            m_ProjectImageOne.GetComponent<AspectRatioViaPreferredSize>().SetAspectRatio(projectInfo.projectImages[0].rect.width / projectInfo.projectImages[0].rect.height);
+            if (m_ProjectImagesBoth != null) m_ProjectImagesBoth.SetActive(true);
+            if (m_ProjectImageOne != null)
+            {
+                m_ProjectImageOne.gameObject.SetActive(true);
+                m_ProjectImageOne.sprite = projectInfo.projectImages[0];
+                var ratio = projectInfo.projectImages[0].rect.width / projectInfo.projectImages[0].rect.height;
+                var aspect = m_ProjectImageOne.GetComponent<AspectRatioViaPreferredSize>();
+                if (aspect != null) aspect.SetAspectRatio(ratio);
+            }
         } else
         {
-            m_ProjectImageOne.gameObject.SetActive(false);
-            m_ProjectImagesBoth.SetActive(false);
+            if (m_ProjectImageOne != null) m_ProjectImageOne.gameObject.SetActive(false);
+            if (m_ProjectImagesBoth != null) m_ProjectImagesBoth.SetActive(false);
         }
 
         if (projectInfo.projectImages.Count > 1)
         {
-            m_ProjectImageTwo.gameObject.SetActive(true);
-            m_ProjectImageTwo.sprite = projectInfo.projectImages[1];
-            m_ProjectImageTwo.GetComponent<AspectRatioViaPreferredSize>().SetAspectRatio(projectInfo.projectImages[1].rect.width / projectInfo.projectImages[1].rect.height);
+            if (m_ProjectImageTwo != null)
+            {
+                m_ProjectImageTwo.gameObject.SetActive(true);
+                m_ProjectImageTwo.sprite = projectInfo.projectImages[1];
+                var ratio2 = projectInfo.projectImages[1].rect.width / projectInfo.projectImages[1].rect.height;
+                var aspect2 = m_ProjectImageTwo.GetComponent<AspectRatioViaPreferredSize>();
+                if (aspect2 != null) aspect2.SetAspectRatio(ratio2);
+            }
         }
         else
         {
-            m_ProjectImageTwo.gameObject.SetActive(false);
+            if (m_ProjectImageTwo != null) m_ProjectImageTwo.gameObject.SetActive(false);
         }
     }
 }

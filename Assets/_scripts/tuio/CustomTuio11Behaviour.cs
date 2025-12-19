@@ -37,8 +37,12 @@ public abstract class CustomTuio11Behaviour : TuioBehaviour
         Destroy(gameObject);
     }
 
+    /// <summary>
+    /// Returns diagnostic information about the underlying TUIO container.
+    /// Base implementation returns an empty string to avoid exceptions if not overridden.
+    /// </summary>
     public override string DebugText()
     {
-        throw new NotImplementedException();
+        return string.Empty;
     }
 }

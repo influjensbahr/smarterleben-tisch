@@ -6,11 +6,22 @@ using TuioNet.Tuio11;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Spawns and animates landmarker visuals when a TUIO cursor appears inside this RectTransform area.
+/// </summary>
+[RequireComponent(typeof(RectTransform))]
 public class LandmarkerVisualSpawner : MonoBehaviour
 {
     [SerializeField] GameObject[] m_LandmarkerPrefab;
     [SerializeField] float m_AnimationDuration = 0.5f;
     [SerializeField] float m_AnimationDelay = 0.2f;
+
+    RectTransform m_Rect;
+
+    void Awake()
+    {
+        m_Rect = GetComponent<RectTransform>();
+    }
 
     private void OnEnable()
     {
@@ -24,14 +35,16 @@ public class LandmarkerVisualSpawner : MonoBehaviour
 
     public void CreateLandmarker(Tuio11Cursor tuioCursor)
     {
+        if (m_Rect == null || m_LandmarkerPrefab == null || m_LandmarkerPrefab.Length == 0) return;
+
         Vector2 touchPosition = new Vector2(tuioCursor.Position.X * Screen.width, Screen.height - tuioCursor.Position.Y * Screen.height);
 
-        if (RectTransformUtility.RectangleContainsScreenPoint(GetComponent<RectTransform>(), touchPosition))
+        if (RectTransformUtility.RectangleContainsScreenPoint(m_Rect, touchPosition))
         {
-            Debug.Log("CreateLandmarker");
             for (int i = 0; i < m_LandmarkerPrefab.Length; i++)
             {
                 var landmarker = m_LandmarkerPrefab[i];
+                if (landmarker == null) continue;
                 landmarker.SetActive(true);
                 landmarker.transform.localScale = Vector3.zero;
 

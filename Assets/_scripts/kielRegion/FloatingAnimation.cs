@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Simple vertical floating animation using a sine wave.
+/// </summary>
 public class FloatingAnimation : MonoBehaviour
 {
     [SerializeField] float amplitude = 0.5f;
